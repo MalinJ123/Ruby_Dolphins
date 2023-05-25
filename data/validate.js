@@ -7,9 +7,12 @@
 
     let nameIsValid = (typeof p.name) === 'string'
     nameIsValid = nameIsValid && p.name !== ''
+    
+    let priceIsValid = Number(p.price)  
 
-    let priceIsValid = (typeof p.price) !== 'string' 
-    priceIsValid = priceIsValid && p.price !== ''
+    if ( isNaN(priceIsValid)){
+        return false
+    }
     
 
     let imageIsValid = (typeof p.image) === 'string'

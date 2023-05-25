@@ -2,7 +2,7 @@ import express from "express";
 
 // Routers
 import productsRouter from "./routes/summer-products.js";
-// import usersRouter from "./routes/users.js";
+import usersRouter from "./routes/users.js";
 
 import search from "./routes/search.js";
 
@@ -27,7 +27,7 @@ app.use('/api/products', productsRouter)
 app.get('/api/search', search)
 
 // -> CRUD users
-// app.use('/api/users', usersRouter)
+app.use('/api/users', usersRouter)
 
 // Startar servern
 app.listen(PORT, () => {

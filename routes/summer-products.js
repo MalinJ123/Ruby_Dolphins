@@ -60,7 +60,7 @@ router.post('/', async (req, res) => {
 
 	if (!isValidProduct(newProduct)) {
 		console.log('Felsöker Post = Invalid');
-		res.sendStatus(404)
+		res.status(400).send("Kontrollera att du har med Namn, pris(Måste vara siffror), image och tags")
 		return
 	}
 
@@ -109,7 +109,7 @@ router.put('/:id', async (req, res) => {
 
 	if (!isValidProduct(req.body)) {
 		console.log("kontrollerar product");
-		res.status(400).send("Kontrollera att du har med Namn, pris, image och tags")
+		res.status(400).send("Kontrollera att du har med Namn, pris(Måste vara siffror), image och tags")
 		return
 	}
 
