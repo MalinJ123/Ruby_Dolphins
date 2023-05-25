@@ -2,8 +2,10 @@
   "name": "ruby_dolphins",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "main": "index.js",
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -11,7 +13,7 @@
     "url": "git+https://github.com/MalinJ123/Ruby_Dolphins.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Ali, Malin, Mustafa, Victor",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/MalinJ123/Ruby_Dolphins/issues"
