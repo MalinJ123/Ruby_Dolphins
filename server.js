@@ -1,25 +1,33 @@
 import express from "express";
 
+// Routers
 import productsRouter from "./routes/summer-products.js";
+// import usersRouter from "./routes/users.js";
+
+import search from "./routes/search.js";
 
 // Express saker
 const PORT = 6666
 const app = express()
 
-// The middleman
+// The middleman is looking at us
 app.use(express.json())
 
-// Routes
+// Routes //
 
 // -> Start
 app.get("/", (req, res) => {
 	res.send("Sökvägar: <ul><li>/api/products</li><li>/api/search/</li></ul>")
 })
 
-// -> get products
+// -> CRUD products
 app.use('/api/products', productsRouter)
 
-// -> search products
+// -> Search products
+app.get('/api/search', search)
+
+// -> CRUD users
+// app.use('/api/users', usersRouter)
 
 // Startar servern
 app.listen(PORT, () => {

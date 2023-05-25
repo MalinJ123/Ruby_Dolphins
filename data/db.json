@@ -1,121 +1,74 @@
 {
   "products": [
     {
+      "id": 1,
+      "name": "Badboll",
+      "price": 49,
+      "images": ["image1.jpg"],
+      "tags": ["strand", "lek", "sport"]
+    },
+    {
       "id": 2,
       "name": "Solglasögon",
       "price": 299,
-      "image": [
-        "image2.jpg"
-      ],
-      "tags": [
-        "sol",
-        "accessoar",
-        "mode"
-      ]
+      "images": ["image2.jpg"],
+      "tags": ["sol", "accessoar", "mode"]
     },
     {
       "id": 3,
       "name": "Grill",
       "price": 1299,
-      "image": [
-        "image3.jpg"
-      ],
-      "tags": [
-        "matlagning",
-        "uteplats",
-        "sommarfest"
-      ]
+      "images": ["image3.jpg"],
+      "tags": ["matlagning", "uteplats", "sommarfest"]
     },
     {
       "id": 4,
       "name": "Badmadrass",
       "price": 199,
-      "image": [
-        "image4.jpg"
-      ],
-      "tags": [
-        "pool",
-        "avkoppling",
-        "semester"
-      ]
+      "images": ["image4.jpg"],
+      "tags": ["pool", "avkoppling", "semester"]
     },
     {
       "id": 5,
       "name": "Hängmatta",
       "price": 599,
-      "image": [
-        "image5.jpg"
-      ],
-      "tags": [
-        "avslappning",
-        "trädgård",
-        "siesta"
-      ]
+      "images": ["image5.jpg"],
+      "tags": ["avslappning", "trädgård", "siesta"]
     },
     {
       "id": 6,
       "name": "Volleybollnät",
       "price": 349,
-      "image": [
-        "image6.jpg"
-      ],
-      "tags": [
-        "strand",
-        "sport",
-        "aktivitet"
-      ]
+      "images": ["image6.jpg"],
+      "tags": ["strand", "sport", "aktivitet"]
     },
     {
       "id": 7,
       "name": "Vattenspridare",
       "price": 79,
-      "image": [
-        "image7.jpg"
-      ],
-      "tags": [
-        "lek",
-        "trädgård",
-        "vatten"
-      ]
+      "images": ["image7.jpg"],
+      "tags": ["lek", "trädgård", "vatten"]
     },
     {
       "id": 8,
       "name": "Bikini",
       "price": 399,
-      "image": [
-        "image8.jpg"
-      ],
-      "tags": [
-        "badkläder",
-        "strand",
-        "mode"
-      ]
+      "images": ["image8.jpg"],
+      "tags": ["badkläder", "strand", "mode"]
     },
     {
       "id": 9,
       "name": "Solskyddskräm",
       "price": 149,
-      "image": [
-        "image9.jpg"
-      ],
-      "tags": [
-        "sol",
-        "hudvård",
-        "skydd"
-      ]
+      "images": ["image9.jpg"],
+      "tags": ["sol", "hudvård", "skydd"]
     },
     {
       "id": 10,
       "name": "Kubb",
       "price": 199,
-      "image": [
-        "image10.jpg"
-      ],
-      "tags": [
-        "trädgård",
-        "spel",
-        "sommarkväll"
-      ]
+      "images": ["image10.jpg"],
+      "tags": ["trädgård", "spel", "sommarkväll"]
     }
-  ]
+  ] 
 }

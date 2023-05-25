@@ -6,18 +6,19 @@
     }
 
     let nameIsValid = (typeof p.name) === 'string'
-    nameIsValid = nameIsValid && f.name !== ''
+    nameIsValid = nameIsValid && p.name !== ''
 
     let priceIsValid = (typeof p.price) !== 'string' 
-    priceIsValid = priceIsValid && f.price !== ''
+    priceIsValid = priceIsValid && p.price !== ''
+    
 
     let imageIsValid = (typeof p.image) === 'string'
-    imageIsValid = imageIsValid && f.image !== ''
+    imageIsValid = imageIsValid && p.image !== ''
 
     let tagIsValid = (typeof p.tags) === 'string'
-    tagIsValid = tagIsValid && f.tags !== ''
+    tagIsValid = tagIsValid && p.tags !== ''
 
-
+    return true
  }
 
 
