@@ -78,15 +78,13 @@ router.post("/:id", async (req, res) => {
 router.delete("/:id", async (req, res) => {
     await db.read();
     if (!isValidId(req.params.id)) {
-        console.log("test 1");
         return res.status(400).send("Invalid ID");
     }
 
     let id = Number(req.params.id);
     let userToDelete = db.data.users.find((user) => user.id === id);
     if (!userToDelete) {
-        console.log("test 2");
-        return res.status(404).send("User not found");
+        return res.status(400).send("Kunde inte hitta användaren, kontrollera att Id är är korrekt");
     } else {
         db.data.users = db.data.users.filter((user) => user.id !== id);
         await db.write();
@@ -94,22 +92,28 @@ router.delete("/:id", async (req, res) => {
         return res.sendStatus(204);
     }
 });
+
+
+
+
     // Edit user
     router.put("/:id", async (req, res) => {
         await db.read();
 
         let editedUser = req.body
 
-//PUT USER
-
-        if (!isValidId(req.params.id)) {
-            console.log("test 1");
-            return res.status(400).send("Invalid ID");
-        }
-
+        
         let id = Number(req.params.id);
         let oldUser = db.data.users.find((user) => user.id === id);
-        
+
+        if (!isValidId(req.params.id)) {
+           return res.status(400).send("Ogitligt Id, Kontrollera att det endast är siffror och inte bokstäver");
+       }
+
+        if (!oldUser){
+            return res.status(400).send("Kunde inte hitta användaren, kontrollera att Id  är korrekt");
+        } 
+            
         oldUser.username = editedUser.username;
         oldUser.password = editedUser.password;
 
