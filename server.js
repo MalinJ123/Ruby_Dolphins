@@ -4,7 +4,7 @@ import express from "express";
 import productsRouter from "./routes/summer-products.js";
 import usersRouter from "./routes/users.js";
 
-import search from "./routes/search.js";
+import searchQuery from "./routes/search.js";
 
 // Express saker
 const PORT = 6666
@@ -24,7 +24,7 @@ app.get("/", (req, res) => {
 app.use('/api/products', productsRouter)
 
 // -> Search products
-app.get('/api/search', search)
+app.get('/api/search', searchQuery)
 
 // -> CRUD users
 app.use('/api/users', usersRouter)
