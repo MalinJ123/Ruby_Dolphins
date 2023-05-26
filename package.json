@@ -6,6 +6,12 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,7 +26,11 @@
   },
   "homepage": "https://github.com/MalinJ123/Ruby_Dolphins#readme",
   "dependencies": {
+    "@vitejs/plugin-react-swc": "^3.3.1",
     "express": "^4.18.2",
-    "lowdb": "^6.0.1"
+    "lowdb": "^6.0.1",
+    "react": "^18.2.0",
+    "react-router-dom": "^6.11.2",
+    "vite": "^4.3.9"
   }
 }
