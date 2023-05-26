@@ -93,10 +93,41 @@ router.delete( '/:id' , async (req, res) => {
 			db.data.users = db.data.users.filter((user) => user.id!== id);
             await db.write();
 			console.log('test 3');
-            return res.sendStatus(204);
+            return res.status(200).send('User deleted');
 		 }
 })
 
+//PUT USER
 
+router.put( '/:id', async (req, res) => {
+	let id = Number(req.params.id);
+
+	if(!isValidId(id)){
+		res.status(404).send('Id måste vara nummer inte bokstäver ')
+		console.log('id är invalid');
+		return;
+	}
+
+	if(!isValidUser(req.body)){
+		res.status(400).send('Det måste vara sträng inte nummer')
+		console.log('invalid user'); 
+		return;
+	}
+	let newUser = req.body;
+	let oldUser = db.data.users.findIndex((user) => user.id === id);
+	if(oldUser === -1) {
+		res.status(404).send('User not found');
+		console.log('user är inte ändrat');
+		return;
+	}
+	let userToUpdate = db.data.users.find((user) => user.id === id);
+	userToUpdate.username = newUser.username;
+	userToUpdate.password = newUser.password;
+
+	db.data.users[userToUpdate] = newUser;
+	await db.write();
+	res.sendStatus(200);
+	console.log('test för ändring');
+})
 
 export default router;

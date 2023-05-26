@@ -42,6 +42,8 @@ function isValidUser(x) {
     }
     let usernameIsValid = (typeof x.username) === 'string'
     usernameIsValid = usernameIsValid && x.usernname !== ''
+    return true
 }
+
 
  export {isValidProduct, isValidId , isValidUser}
