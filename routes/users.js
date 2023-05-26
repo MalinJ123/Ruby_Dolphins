@@ -1,8 +1,9 @@
 import express, { application } from 'express';
 import { getUserDb } from '../data/userDatabase/userDb.js';
-import { isValidUser } from '../data/validate.js';
+import { isValidId, isValidUser } from '../data/validate.js';
 
 const router = express.Router();
+const db = getUserDb();
 
 //	 X	 GET - User lista 
 //	 X  GET - Users genom ID
@@ -13,7 +14,6 @@ const router = express.Router();
 // GET Users - hela listan
 router.get('/', async (req, res) => {
 	try {
-	  const db = getUserDb();
 	  await db.read();
 	  const users = db.data.users;
 	  console.log('Visar user-lista', users);
@@ -28,7 +28,6 @@ router.get('/', async (req, res) => {
 //GET Users - med ID
 router.get('/:id', async (req, res) => {
 	try {
-	  const db = getUserDb();
 	  await db.read();
 	  const users = db.data.users;
 	  const userId = parseInt(req.params.id);
@@ -48,8 +47,7 @@ router.get('/:id', async (req, res) => {
 });
 
 //Post User 
-router.post( '/' , async (req, res) => {
-	const db = getUserDb();
+router.post( '/:id' , async (req, res) => {
 	await db.read();
 	console.log('test 1');
 	
@@ -77,6 +75,28 @@ router.post( '/' , async (req, res) => {
 	console.log('test 3');
 })
 
- 
+// DELETE User
+router.delete( '/:id' , async (req, res) => {
+	await db.read();
+	if( !isValidId(req.params.id) ) {
+		console.log('test 1');
+		return res.status(400).send('Invalid ID');
+	}
+
+	let id = Number(req.params.id);
+	let userToDelete = db.data.users.find((user) => user.id === id);
+	if(!userToDelete) {
+		console.log('test 2');
+			return res.status(404).send('User not found');
+		}
+		else {
+			db.data.users = db.data.users.filter((user) => user.id!== id);
+            await db.write();
+			console.log('test 3');
+            return res.sendStatus(204);
+		 }
+})
+
+
 
 export default router;
