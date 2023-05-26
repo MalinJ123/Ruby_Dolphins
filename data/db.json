@@ -132,6 +132,16 @@
         "accessoar",
         "mode"
       ]
+    },
+    {
+      "id": 0,
+      "name": "mimi anka",
+      "price": 549,
+      "tags": [
+        "anka",
+        "farlig",
+        "ankmamma"
+      ]
     }
   ]
 }
