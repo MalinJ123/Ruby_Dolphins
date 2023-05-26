@@ -14,21 +14,21 @@ async function searchQuery(req, res){
     if (!query) {
         return res.status(400).send("Ingen query string")
     } else if (query) {
+
         await db.read();
+
         searchValue = db.data.products.filter((product) => product.name.toLowerCase().includes(query))
 
         if (!searchValue) {
-            res.status(404).send("Produkten finns ej!")
+            return res.status(404).send("Produkten finns ej!")
         }
-
-        res.status(200).send(searchValue)
 
         if (query && sort && order) {
             searchQueryWithSortOptions(searchValue, sort, order, res)
+        } else {
+            console.log('Har inte applicerat sorterings & ordneringsval, visar: ', searchValue);
+            res.status(200).send(searchValue)
         }
-
-    } else {
-        return res.status(400).send("Ingen sorterings- och ordningsval används")
     }
 }
 
@@ -47,34 +47,26 @@ function searchQueryWithSortOptions(searchValue, sort, order, res) {
 
 async function sortByName(searchValue, order, orderOption, res) {
 
-    console.log('1. Finns jag här?')
         if (order === 'asc') {
-            console.log('2. Finns jag här uppe?')
-            return orderOption = searchValue.sort((a, b) => a.name.localeCompare(b.name))
+             orderOption = searchValue.sort((a, b) => a.name.localeCompare(b.name))
         } else if (order === 'desc') {
-            console.log('3. Finns jag här nere?')
-            return orderOption = searchValue.sort((a, b) => b.name.localeCompare(a.name))
-        } else if (!order === 'asc' || !order === 'desc') {
-            console.log('4. Finns jag någonstans?')
-            return res.status(400).send("Ogilltig ordning")
-        } else if (!order) {
-            console.log('5. Finns jag här?')
-            return res.status(400).send("Vänligen välj en ordning")
+             orderOption = searchValue.sort((a, b) => b.name.localeCompare(a.name))
+        } else {
+            return res.status(400).send("Ogilltig ordningsval")
         }
-        return res.status(200).send(orderOption)
+        console.log('7. Order grejs: ', orderOption, order)
+         return res.status(200).send(orderOption)
 }
 
 async function sortByPrice(searchValue, order, orderOption, res) {
 
         if (order === 'asc') {
-           return orderOption = searchValue.sort((a, b) => a.price - b.price)
+            orderOption = searchValue.sort((a, b) => a.price - b.price)
         } else if (order === 'desc') {
-           return orderOption = searchValue.sort((a, b) => b.price - a.price)
-        } else if (!order === 'asc' &&!order === 'desc') {
-            return res.status(400).send("Ogilltig ordning")
-        }  else if (!order) {
-        return res.status(400).send("Vänligen välj en ordning")
-        } 
+            orderOption = searchValue.sort((a, b) => b.price - a.price)
+        }  else {
+            return res.status(400).send("Ogilltig ordningsval")
+        }
     return res.status(200).send(orderOption)
 }
 export default searchQuery;
