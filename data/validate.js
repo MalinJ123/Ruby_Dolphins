@@ -34,4 +34,14 @@
 	return maybeId >= 0
 }
 
- export {isValidProduct, isValidId}
+function isValidUser(x) {
+    if ((typeof x ) !== 'object' ){
+        return false;
+    }else if (x === null){
+        return false;
+    }
+    let usernameIsValid = (typeof x.username) === 'string'
+    usernameIsValid = usernameIsValid && x.usernname !== ''
+}
+
+ export {isValidProduct, isValidId , isValidUser}
