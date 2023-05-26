@@ -75,6 +75,13 @@ router.post("/:id", async (req, res) => {
 });
 
 // DELETE User
+router.delete("/all", async (req, res) => {
+	await db.read();
+	db.data.users = [];
+	await db.write();
+	res.sendStatus(204);
+})
+
 router.delete("/:id", async (req, res) => {
     await db.read();
     if (!isValidId(req.params.id)) {
@@ -92,9 +99,6 @@ router.delete("/:id", async (req, res) => {
         return res.sendStatus(204);
     }
 });
-
-
-
 
     // Edit user
     router.put("/:id", async (req, res) => {
@@ -121,5 +125,7 @@ router.delete("/:id", async (req, res) => {
         await db.write();
         res.status(200).send(` Ändringen har Lyckats, här är resultatet ${JSON.stringify(editedUser)}`)
     });
+
+
 
 export default router;
