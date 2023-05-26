@@ -100,6 +100,7 @@ router.delete("/:id", async (req, res) => {
 
         let editedUser = req.body
 
+//PUT USER
 
         if (!isValidId(req.params.id)) {
             console.log("test 1");
