@@ -7,11 +7,18 @@ import usersRouter from "./api/routes/users.js";
 import searchQuery from "./api/routes/search.js";
 
 // Express saker
-const PORT = 6666
+const PORT = 1337
 const app = express()
 
-// The middleman is looking at us
+// The middlemen are looking at us
+app.use((req, res, next) => {
+	res.header("Access-Control-Allow-Origin", "*")
+	next();
+})
+
 app.use(express.json())
+
+
 
 // Routes //
 

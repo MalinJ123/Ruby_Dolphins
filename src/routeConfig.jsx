@@ -2,7 +2,7 @@ import { createHashRouter } from "react-router-dom";
 
 // Routes
 import Root from "../routes/Root";
-import Products /*, {loader as productsLoader}*/ from "../routes/Products";
+import Products, {loader as productsLoader} from "../routes/Products";
 
 
 const router = createHashRouter([
@@ -13,7 +13,7 @@ const router = createHashRouter([
             {
                 path: '/products',
                 element: <Products />,
-                // loader: productsLoader
+                loader: productsLoader
             }
         ]
     }

@@ -1,11 +1,23 @@
 import { useLoaderData, Link } from "react-router-dom";
 
-// export const loader = () => getProducts();
+import getProducts from "../data/getProducts";
+
+export const loader = () => getProducts();
 
 function Products() {
+    const productData = useLoaderData(loader);
     return (
         <div>
             <h1>Products</h1>
+            <ul>
+                {
+                    productData.map((product) => (
+                        <li key={product.id}>
+                            <Link to={`/products/${product.id}`}>{product.name}</Link>
+                        </li>
+                    ))
+                }
+            </ul>
         </div>
     )
 }
