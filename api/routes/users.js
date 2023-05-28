@@ -8,7 +8,7 @@ const db = getUserDb();
 //	 X	 GET - User lista
 //	 X  GET - Users genom ID
 //	 X	 POST - Uppdatera User
-//		DELETE - Radera ALLA User
+//	 X	DELETE - Radera ALLA User
 //		 DELETE - Radera Användare med Id
 
 // GET Users - hela listan

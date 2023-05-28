@@ -1,10 +1,10 @@
 import express from "express";
 
 // Routers
-import productsRouter from "./routes/summer-products.js";
-import usersRouter from "./routes/users.js";
+import productsRouter from "./api/routes/summer-products.js";
+import usersRouter from "./api/routes/users.js";
 
-import searchQuery from "./routes/search.js";
+import searchQuery from "./api/routes/search.js";
 
 // Express saker
 const PORT = 6666
