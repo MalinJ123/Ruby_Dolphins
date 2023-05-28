@@ -1,7 +1,7 @@
 import express from "express";
 
 // Routers
-import productsRouter from "./api/routes/summer-products.js";
+import productsRouter from "./api/routes/products.js";
 import usersRouter from "./api/routes/users.js";
 
 import searchQuery from "./api/routes/search.js";

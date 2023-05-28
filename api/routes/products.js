@@ -1,5 +1,5 @@
 import express from 'express'
-import { getDb } from '../data/database.js'
+import { getDb } from '../data/products/database.js'
 import { isValidProduct, isValidId } from '../data/validate.js'
 
 

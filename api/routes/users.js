@@ -1,5 +1,5 @@
 import express, { application } from "express";
-import { getUserDb } from "../data/userDatabase/userDb.js";
+import { getUserDb } from "../data/users/userDb.js";
 import { isValidId, isValidUser } from "../data/validate.js";
 
 const router = express.Router();
