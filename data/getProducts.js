@@ -10,7 +10,8 @@ async function getProducts() {
     }
     const response = await fetch(API_URL + 'products/', options );
     const data = await response.json();
-    console.log('Response:', data);
+    console.log('Response: ', data);
+    return data;
 }
 
-export default getProducts;
+export {getProducts};

@@ -7,7 +7,7 @@ import usersRouter from "./api/routes/users.js";
 import searchQuery from "./api/routes/search.js";
 
 // Express saker
-const PORT = 1337
+const PORT = 666
 const app = express()
 
 // The middlemen are looking at us
@@ -16,9 +16,13 @@ app.use((req, res, next) => {
 	next();
 })
 
+app.options('*', (req, res) => {
+    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+    res.header('Access-Control-Allow-Headers', 'Content-Type');
+    res.send();
+});
+
 app.use(express.json())
-
-
 
 // Routes //
 
