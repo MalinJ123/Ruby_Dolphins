@@ -6,7 +6,7 @@ import { JSONFile } from 'lowdb/node'
 function getUserDb() {
 	// Skapa sökväg till databasen
 	const __dirname = dirname(fileURLToPath(import.meta.url));
-	const file = join(__dirname, 'dbUsers.json');
+	const file = join(__dirname, 'db.json');
 	const adapter = new JSONFile(file);
 	const db = new Low(adapter, {});
 	// {} verkar vara default datan

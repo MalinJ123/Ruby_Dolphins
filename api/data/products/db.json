@@ -121,147 +121,157 @@
       ]
     },
     {
-        "id": 11,
-        "name": "Strandhandduk",
-        "price": 249,
-        "images": [
-          "beach_towel.jpg"
-        ],
-        "tags": [
-          "strand",
-          "sol",
-          "bad"
-        ]
-      },
-      {
-        "id": 12,
-        "name": "Solglasögon",
-        "price": 199,
-        "images": [
-          "sunglasses.jpg"
-        ],
-        "tags": [
-          "sol",
-          "accessoar",
-          "mode"
-        ]
-      },
-      {
-        "id": 13,
-        "name": "Sommarhatt",
-        "price": 99,
-        "images": [
-          "summer_hat.jpg"
-        ],
-        "tags": [
-          "sol",
-          "accessoar",
-          "mode"
-        ]
-      },
-      {
-        "id": 14,
-        "name": "Grillverktygset",
-        "price": 79,
-        "images": [
-          "grill_tools.jpg"
-        ],
-        "tags": [
-          "grillning",
-          "sommarfest",
-          "matlagning"
-        ]
-      },
-      {
-        "id": 15,
-        "name": "Badmintonset",
-        "price": 129,
-        "images": [
-          "badminton_set.jpg"
-        ],
-        "tags": [
-          "sommaraktivitet",
-          "trädgård",
-          "lek"
-        ]
-      },
-      {
-        "id": 16,
-        "name": "Picknickkorg",
-        "price": 349,
-        "images": [
-          "picnic_basket.jpg"
-        ],
-        "tags": [
-          "picknick",
-          "utepils",
-          "sommarutflykt"
-        ]
-      },
-      {
-        "id": 17,
-        "name": "Solskyddshatt",
-        "price": 149,
-        "images": [
-          "sun_hat.jpg"
-        ],
-        "tags": [
-          "sol",
-          "skydd",
-          "accessoar"
-        ]
-      },
-      {
-        "id": 18,
-        "name": "Iskall dryckeshållare",
-        "price": 59,
-        "images": [
-          "drink_holder.jpg"
-        ],
-        "tags": [
-          "sommar",
-          "strand",
-          "dryck"
-        ]
-      },
-      {
-        "id": 19,
-        "name": "Flytväst",
-        "price": 199,
-        "images": [
-          "life_jacket.jpg"
-        ],
-        "tags": [
-          "vattensport",
-          "säkerhet",
-          "sommaraktivitet"
-        ]
-      },
-      {
-        "id": 20,
-        "name": "Bärbar solstol",
-        "price": 599,
-        "images": [
-          "portable_sun_chair.jpg"
-        ],
-        "tags": [
-          "avkoppling",
-          "stranden",
-          "solstol"
-        ]
-      },
-      {
-        "id": 21,
-        "name": "Midsommarblomsterkrans",
-        "price": 69,
-        "images": [
-          "midsummer_flower_crown.jpg"
-        ],
-        "tags": [
-          "midsommar",
-          "fest",
-          "accessoar"
-        ]
-      }
+      "id": 11,
+      "name": "Strandhandduk",
+      "price": 249,
+      "images": [
+        "beach_towel.jpg"
+      ],
+      "tags": [
+        "strand",
+        "sol",
+        "bad"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Solglasögon",
+      "price": 199,
+      "images": [
+        "sunglasses.jpg"
+      ],
+      "tags": [
+        "sol",
+        "accessoar",
+        "mode"
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Sommarhatt",
+      "price": 99,
+      "images": [
+        "summer_hat.jpg"
+      ],
+      "tags": [
+        "sol",
+        "accessoar",
+        "mode"
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Grillverktygset",
+      "price": 79,
+      "images": [
+        "grill_tools.jpg"
+      ],
+      "tags": [
+        "grillning",
+        "sommarfest",
+        "matlagning"
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Badmintonset",
+      "price": 129,
+      "images": [
+        "badminton_set.jpg"
+      ],
+      "tags": [
+        "sommaraktivitet",
+        "trädgård",
+        "lek"
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Picknickkorg",
+      "price": 349,
+      "images": [
+        "picnic_basket.jpg"
+      ],
+      "tags": [
+        "picknick",
+        "utepils",
+        "sommarutflykt"
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Solskyddshatt",
+      "price": 149,
+      "images": [
+        "sun_hat.jpg"
+      ],
+      "tags": [
+        "sol",
+        "skydd",
+        "accessoar"
+      ]
+    },
+    {
+      "id": 18,
+      "name": "Iskall dryckeshållare",
+      "price": 59,
+      "images": [
+        "drink_holder.jpg"
+      ],
+      "tags": [
+        "sommar",
+        "strand",
+        "dryck"
+      ]
+    },
+    {
+      "id": 19,
+      "name": "Flytväst",
+      "price": 199,
+      "images": [
+        "life_jacket.jpg"
+      ],
+      "tags": [
+        "vattensport",
+        "säkerhet",
+        "sommaraktivitet"
+      ]
+    },
+    {
+      "id": 20,
+      "name": "Bärbar solstol",
+      "price": 599,
+      "images": [
+        "portable_sun_chair.jpg"
+      ],
+      "tags": [
+        "avkoppling",
+        "stranden",
+        "solstol"
+      ]
+    },
+    {
+      "id": 21,
+      "name": "Midsommarblomsterkrans",
+      "price": 69,
+      "images": [
+        "midsummer_flower_crown.jpg"
+      ],
+      "tags": [
+        "midsommar",
+        "fest",
+        "accessoar"
+      ]
+    },
+    {
+      "id": 634,
+      "name": "Banan",
+      "image": "morot.jpg",
+      "price": 5,
+      "tags": [
+        "crunchy",
+        "nutritious"
+      ]
+    }
   ]
 }
