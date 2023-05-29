@@ -78,7 +78,7 @@ router.delete('/:id', async (req, res) => {
 	await db.read()
 
 	if (!isValidId(req.params.id)) {
-		res.sendStatus(400).send("Kontrollera att du har skrivit Id som nummber och inte med bokstäver")
+		res.status(400).send("Kontrollera att du har skrivit Id som nummber och inte med bokstäver")
 		return
 	}
 
