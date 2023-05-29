@@ -1,5 +1,5 @@
 import express, { application } from "express";
-import { getUserDb } from "../data/users/userDb.js";
+import { getUserDb } from "../data/users/database.js";
 import { isValidId, isValidUser } from "../data/validate.js";
 
 const router = express.Router();
@@ -35,10 +35,10 @@ router.get("/:id", async (req, res) => {
 
         if (!user) {
             return res.status(404).send("User not found.");
+        } else {
+            console.log("Visar användaren med ID:", user);
+            res.send(user);
         }
-
-        console.log("Visar användaren med ID:", user);
-        res.send(user);
     } catch (error) {
         console.log("Ett fel uppstod vid hämtning av användare:", error);
         res.status(500).send("Ett fel uppstod vid hämtning av användare.");
@@ -46,32 +46,33 @@ router.get("/:id", async (req, res) => {
 });
 
 //Post User
-router.post("/:id", async (req, res) => {
+router.post("/", async (req, res) => {
     await db.read();
     console.log("test 1");
 
-    let username = req.body.username;
+    let name = req.body.name;
     let password = req.body.password;
     function generateId() {
         return Math.floor(Math.random() * 10000);
     }
     let newUser = {
         id: generateId(),
-        username,
+        name,
         password,
     };
     console.log("newUser", newUser);
-    if (isValidUser(newUser)) {
+    if (!isValidUser(newUser)) {
         console.log("test 2", newUser);
         console.log("det måste vara sträng");
         res.status(400).send("Det måste vara sträng inte nummer");
 
         return;
+    } else {
+        db.data.users.push(newUser);
+        await db.write();
+        res.status(200).send(newUser);
+        console.log("test 3", newUser);
     }
-    db.data.users.push(newUser);
-    await db.write();
-    res.sendStatus(201);
-    console.log("test 3");
 });
 
 // DELETE User
@@ -79,7 +80,7 @@ router.delete("/all", async (req, res) => {
 	await db.read();
 	db.data.users = [];
 	await db.write();
-	res.sendStatus(204);
+	res.sendStatus(200);
 })
 
 router.delete("/:id", async (req, res) => {
@@ -96,7 +97,7 @@ router.delete("/:id", async (req, res) => {
         db.data.users = db.data.users.filter((user) => user.id !== id);
         await db.write();
         console.log("test 3");
-        return res.sendStatus(204);
+        return res.sendStatus(200);
     }
 });
 
@@ -118,7 +119,7 @@ router.delete("/:id", async (req, res) => {
             return res.status(400).send("Kunde inte hitta användaren, kontrollera att Id  är korrekt");
         } 
             
-        oldUser.username = editedUser.username;
+        oldUser.name = editedUser.name;
         oldUser.password = editedUser.password;
 
         db.data.users[oldUser] = editedUser;

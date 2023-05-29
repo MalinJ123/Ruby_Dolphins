@@ -2,22 +2,22 @@
   "users": [
     {
       "id": 1,
-      "username": "Admin",
+      "name": "Admin",
       "password": "mums"
     },
     {
       "id": 2,
-      "username": "Aliow",
+      "name": "Aliow",
       "password": "password"
     },
     {
       "id": 3,
-      "username": "Alice in wonderland",
+      "name": "Alice in wonderland",
       "password": "user2"
     },
     {
       "id": 9287,
-      "username": "Admin133333",
+      "name": "Admin133333",
       "password": "mums133333"
     }
   ]

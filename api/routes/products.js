@@ -21,13 +21,16 @@ router.get('/:id', async (req, res) => {
 	await db.read()
 	if (isNaN(id)) {
 		res.status(400).send('Felaktigt värde på ID')
-	} else if (id > db.data.products.length - 1) {
-		res.status(400).send('id måste vara 0 till ' + db.data.products.length)
 	} else if (id < 0) {
 		res.status(400).send('id får inte vara under 0 ')
 	} else {
 		let product = db.data.products.find(product => product.id === id)
-		res.send(`Produkt ID: ${product.id} - Produktnamn: ${product.name} - Produktbild: ${product.image} - Produktpris: ${product.price} - Produkttaggar: ${product.tags}`)
+
+		if (!product) {
+			res.sendStatus(404)
+		} else {
+			res.send(product)
+		}
 	}
 })
 
@@ -35,7 +38,6 @@ router.get('/:id', async (req, res) => {
 router.post('/', async (req, res) => {
 	console.log('kollar om post funkar =)');
 	await db.read()
-
 
 	let name = req.body.name
 	let image = req.body.image
@@ -62,14 +64,12 @@ router.post('/', async (req, res) => {
 		console.log('Felsöker Post = Invalid');
 		res.status(400).send("Kontrollera att du har med Namn, pris(Måste vara siffror), image och tags")
 		return
+	} else {
+		console.log('Kollar om POST är "valid" ');
+        db.data.products.push(newProduct)
+        await db.write()
+        res.status(200).send(newProduct)
 	}
-
-
-	console.log('Kollar om POST är "valid" ');
-	db.data.products.push(newProduct)
-	await db.write()
-	res.sendStatus(201)
-
 })
 
 // 	DELETE
@@ -78,7 +78,7 @@ router.delete('/:id', async (req, res) => {
 	await db.read()
 
 	if (!isValidId(req.params.id)) {
-		res.sendStatus(400).send("Kontrollera att du har skrivit Id som nummber och inte med bokstäver")
+		res.status(400).send("Kontrollera att du har skrivit Id som nummber och inte med bokstäver")
 		return
 	}
 
@@ -132,7 +132,7 @@ router.put('/:id', async (req, res) => {
 
 	db.data.products[oldProduct] = editedProduct
 	await db.write()
-	res.status(200).send(`Produkten är nu ändrad, ${editedProduct}`)
+	res.sendStatus(200)
 	console.log("Produkten är ändrad");
 
 
