@@ -4,25 +4,18 @@
       "id": 1,
       "name": "kalle anka",
       "price": 15,
-      "images": [
-        "image1.jpg"
-      ],
+      "image": "image2.jpg",
       "tags": [
         "Små",
         "fluffiga",
         "mode"
-      ],
-      "image": [
-        "image2.jpg"
       ]
     },
     {
       "id": 3,
       "name": "Grill",
       "price": 1299,
-      "images": [
-        "image3.jpg"
-      ],
+      "image": "image3.jpg",
       "tags": [
         "matlagning",
         "uteplats",
@@ -33,9 +26,7 @@
       "id": 4,
       "name": "Badmadrass",
       "price": 199,
-      "images": [
-        "image4.jpg"
-      ],
+      "image": "image4.jpg",
       "tags": [
         "pool",
         "avkoppling",
@@ -46,9 +37,7 @@
       "id": 5,
       "name": "Hängmatta",
       "price": 599,
-      "images": [
-        "image5.jpg"
-      ],
+      "image": "image5.jpg",
       "tags": [
         "avslappning",
         "trädgård",
@@ -59,9 +48,7 @@
       "id": 6,
       "name": "Volleybollnät",
       "price": 349,
-      "images": [
-        "image6.jpg"
-      ],
+      "image": "image6.jpg",
       "tags": [
         "strand",
         "sport",
@@ -72,9 +59,7 @@
       "id": 7,
       "name": "Vattenspridare",
       "price": 79,
-      "images": [
-        "image7.jpg"
-      ],
+      "image": "image7.jpg",
       "tags": [
         "lek",
         "trädgård",
@@ -85,9 +70,7 @@
       "id": 8,
       "name": "Bikini",
       "price": 399,
-      "images": [
-        "image8.jpg"
-      ],
+      "image": "image8.jpg",
       "tags": [
         "badkläder",
         "strand",
@@ -98,9 +81,7 @@
       "id": 9,
       "name": "Solskyddskräm",
       "price": 149,
-      "images": [
-        "image9.jpg"
-      ],
+      "image": "image9.jpg",
       "tags": [
         "sol",
         "hudvård",
@@ -111,9 +92,7 @@
       "id": 10,
       "name": "Kubb",
       "price": 199,
-      "images": [
-        "image10.jpg"
-      ],
+      "image": "image10.jpg",
       "tags": [
         "trädgård",
         "spel",
@@ -124,9 +103,7 @@
       "id": 11,
       "name": "Strandhandduk",
       "price": 249,
-      "images": [
-        "beach_towel.jpg"
-      ],
+      "image": "beach_towel.jpg",
       "tags": [
         "strand",
         "sol",
@@ -137,9 +114,7 @@
       "id": 12,
       "name": "Solglasögon",
       "price": 199,
-      "images": [
-        "sunglasses.jpg"
-      ],
+      "image": "sunglasses.jpg",
       "tags": [
         "sol",
         "accessoar",
@@ -150,9 +125,7 @@
       "id": 13,
       "name": "Sommarhatt",
       "price": 99,
-      "images": [
-        "summer_hat.jpg"
-      ],
+      "image": "summer_hat.jpg",
       "tags": [
         "sol",
         "accessoar",
@@ -163,9 +136,7 @@
       "id": 14,
       "name": "Grillverktygset",
       "price": 79,
-      "images": [
-        "grill_tools.jpg"
-      ],
+      "image": "grill_tools.jpg",
       "tags": [
         "grillning",
         "sommarfest",
@@ -176,9 +147,7 @@
       "id": 15,
       "name": "Badmintonset",
       "price": 129,
-      "images": [
-        "badminton_set.jpg"
-      ],
+      "image": "badminton_set.jpg",
       "tags": [
         "sommaraktivitet",
         "trädgård",
@@ -189,9 +158,7 @@
       "id": 16,
       "name": "Picknickkorg",
       "price": 349,
-      "images": [
-        "picnic_basket.jpg"
-      ],
+      "image": "picnic_basket.jpg",
       "tags": [
         "picknick",
         "utepils",
@@ -202,9 +169,7 @@
       "id": 17,
       "name": "Solskyddshatt",
       "price": 149,
-      "images": [
-        "sun_hat.jpg"
-      ],
+      "image": "sun_hat.jpg",
       "tags": [
         "sol",
         "skydd",
@@ -215,9 +180,7 @@
       "id": 18,
       "name": "Iskall dryckeshållare",
       "price": 59,
-      "images": [
-        "drink_holder.jpg"
-      ],
+      "image": "drink_holder.jpg",
       "tags": [
         "sommar",
         "strand",
@@ -228,9 +191,7 @@
       "id": 19,
       "name": "Flytväst",
       "price": 199,
-      "images": [
-        "life_jacket.jpg"
-      ],
+      "image": "life_jacket.jpg",
       "tags": [
         "vattensport",
         "säkerhet",
@@ -241,9 +202,7 @@
       "id": 20,
       "name": "Bärbar solstol",
       "price": 599,
-      "images": [
-        "portable_sun_chair.jpg"
-      ],
+      "image": "portable_sun_chair.jpg",
       "tags": [
         "avkoppling",
         "stranden",
@@ -254,9 +213,7 @@
       "id": 21,
       "name": "Midsommarblomsterkrans",
       "price": 69,
-      "images": [
-        "midsummer_flower_crown.jpg"
-      ],
+      "image": "midsummer_flower_crown.jpg",
       "tags": [
         "midsommar",
         "fest",
@@ -264,37 +221,7 @@
       ]
     },
     {
-      "id": 634,
-      "name": "Banan",
-      "image": "morot.jpg",
-      "price": 5,
-      "tags": [
-        "crunchy",
-        "nutritious"
-      ]
-    },
-    {
-      "id": 132,
-      "name": "Banan",
-      "image": "morot.jpg",
-      "price": 5,
-      "tags": [
-        "crunchy",
-        "nutritious"
-      ]
-    },
-    {
-      "id": 781,
-      "name": "Banan",
-      "image": "morot.jpg",
-      "price": 5,
-      "tags": [
-        "crunchy",
-        "nutritious"
-      ]
-    },
-    {
-      "id": 161,
+      "id": 164,
       "name": "Banan",
       "image": "morot.jpg",
       "price": 5,

@@ -46,7 +46,7 @@ router.get("/:id", async (req, res) => {
 });
 
 //Post User
-router.post("/:id", async (req, res) => {
+router.post("/", async (req, res) => {
     await db.read();
     console.log("test 1");
 
@@ -61,17 +61,18 @@ router.post("/:id", async (req, res) => {
         password,
     };
     console.log("newUser", newUser);
-    if (isValidUser(newUser)) {
+    if (!isValidUser(newUser)) {
         console.log("test 2", newUser);
         console.log("det måste vara sträng");
         res.status(400).send("Det måste vara sträng inte nummer");
 
         return;
+    } else {
+        db.data.users.push(newUser);
+        await db.write();
+        res.status(200).send(newUser);
+        console.log("test 3", newUser);
     }
-    db.data.users.push(newUser);
-    await db.write();
-    res.sendStatus(201);
-    console.log("test 3");
 });
 
 // DELETE User
