@@ -1,52 +1,9 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import styled from "styled-components";
-import login from "../src/assets/login.png";
-import { useState } from "react";
-import "./header.css";
+import LoginForm from "./Login";
+import "./Header.css"
 
-<<<<<<< HEAD
-const Head = styled.header`
-    display: flex;
-    width: 100%;
-    height: 52px;
-    float: left;
-`;
-
-const Nav = styled.nav`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 52px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #f7f7f7;
-`;
-
-const Link = styled(NavLink)`
-    padding: 0px 12px;
-    border-radius: 5.75px;
-
-    &:hover {
-        color: #fff;
-        background-color: #232323;
-    }
-`;
-
-function Header() {
-    return (
-        <Head>
-            <Nav>
-                <Link to="/">Hem</Link> 
-                <Link to="/products">Produkter</Link>
-                <Link to="/users">Users</Link>
-                <img className="login-image" src={login} alt="" />
-            </Nav>
-        </Head>
-    );
-=======
 const NavPlaceholder = styled.header`
 	width: 100%;
 	height: 48px;
@@ -210,7 +167,9 @@ function NavLinks() {
 
 function Header() {
 	const [showMobileNav, setShowMobileNav] = useState(false);
+	const [showLoginForm, setShowLoginForm] = useState(false);
 	return (
+        <div className="header-div">
 		<NavPlaceholder>
 			<NavBody>
 				<NavSideBox>
@@ -221,19 +180,24 @@ function Header() {
 				</NavLogoBox>
 				<NavActionBox>
 					<ImposterNavLinkBtn  onClick={() => setShowMobileNav(!showMobileNav)} title="Meny"><span className="material-symbols-outlined">menu</span></ImposterNavLinkBtn>
-					<LoginNavBtn ><span className="material-symbols-outlined">login</span></LoginNavBtn>
+					<LoginNavBtn onClick={() => setShowLoginForm(!showLoginForm)}  ><span className="material-symbols-outlined">login</span></LoginNavBtn>
 				</NavActionBox>
 			</NavBody>
 			{
-				showMobileNav &&(
-					<NavMobileBox>
+                showMobileNav &&(
+                    <NavMobileBox>
 						<NavLinks />
 					</NavMobileBox>
 				)
 			}
 		</NavPlaceholder>
+        {showLoginForm && 
+        <LoginForm/>
+        
+        }
+            </div>
+
 	);
->>>>>>> origin/header
 }
 
 export default Header;

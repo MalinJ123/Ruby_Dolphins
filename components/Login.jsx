@@ -1,20 +1,29 @@
+import "./Login.css";
+
 const LoginForm = () => {
     return (
         <>
             <form action="submit">
-                <div>
-                    <label htmlFor="name"></label>
-                    <input type="text" />
-                </div>
+                <div className="form-div">
+                    <div className="form-header">
+                    <h3>ADMIN</h3>
 
-                <div>
-                    <label htmlFor="password"></label>
-                    <input type="password" />
+                    </div>
+
+                    <div className="input-div">
+                        <label htmlFor="name">Användarnamn</label>
+                        <input id="name" type="text" />
+                    </div>
+
+                    <div className="input-div">
+                        <label htmlFor="password">Lösenord</label>
+                        <input id="password" type="password" />
+                    </div>
+                    <button className="login-btn">Logga in</button>
                 </div>
-                <button>Logga in</button>
             </form>
         </>
     );
 };
 
-export default LoginForm
+export default LoginForm;
