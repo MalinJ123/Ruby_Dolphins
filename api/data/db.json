@@ -1,16 +1,22 @@
 {
-  "products": [
+  "users": [
     {
       "id": 1,
-      "name": "kalle anka",
-      "price": 15,
-      "image": "image2.jpg",
-      "tags": [
-        "Små",
-        "fluffiga",
-        "mode"
-      ]
+      "name": "Admin",
+      "password": "mums"
     },
+    {
+      "id": 2,
+      "name": "Alibaba",
+      "password": "password"
+    },
+    {
+      "id": 3,
+      "name": "Alice in wonderland",
+      "password": "cat"
+    }
+  ],
+  "products": [
     {
       "id": 3,
       "name": "Grill",
@@ -228,6 +234,17 @@
       "tags": [
         "crunchy",
         "nutritious"
+      ]
+    },
+    {
+      "id": 966,
+      "name": "TEGELSTEEEn",
+      "image": "image2.jpg",
+      "price": 200,
+      "tags": [
+        "sol",
+        "accessoar",
+        "mode"
       ]
     }
   ]

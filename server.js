@@ -3,7 +3,6 @@ import express from "express";
 // Routers
 import productsRouter from "./api/routes/products.js";
 import usersRouter from "./api/routes/users.js";
-
 import searchQuery from "./api/routes/search.js";
 
 // Express saker
@@ -19,9 +18,9 @@ app.use((req, res, next) => {
 })
 
 app.options('*', (req, res) => {
-    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-    res.header('Access-Control-Allow-Headers', 'Content-Type');
-    res.send();
+	res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+	res.header('Access-Control-Allow-Headers', 'Content-Type');
+	res.send();
 });
 
 app.use(express.json())

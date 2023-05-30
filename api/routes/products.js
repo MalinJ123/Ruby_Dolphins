@@ -1,5 +1,5 @@
-import express from 'express'
-import { getDb } from '../data/products/database.js'
+import express from "express"
+import { getDb } from '../data/database.js'
 import { isValidProduct, isValidId } from '../data/validate.js'
 
 
@@ -8,8 +8,9 @@ const db = getDb()
 
 // GET Products 
 router.get('/', async (req, res) => {
-	await db.read()
-	res.send(db.data.products)
+	await db.read() 
+	res.status(200).send(db.data.products)
+
 
 })
 
@@ -19,6 +20,7 @@ router.get('/:id', async (req, res) => {
 	let id = Number(maybeID)
 
 	await db.read()
+	
 	if (isNaN(id)) {
 		res.status(400).send('Felaktigt värde på ID')
 	} else if (id < 0) {
@@ -29,7 +31,7 @@ router.get('/:id', async (req, res) => {
 		if (!product) {
 			res.sendStatus(404)
 		} else {
-			res.send(product)
+			res.status(200).send(product)
 		}
 	}
 })
@@ -66,9 +68,9 @@ router.post('/', async (req, res) => {
 		return
 	} else {
 		console.log('Kollar om POST är "valid" ');
-        db.data.products.push(newProduct)
-        await db.write()
-        res.status(200).send(newProduct)
+		db.data.products.push(newProduct)
+		await db.write()
+		res.status(200).send(newProduct)
 	}
 })
 

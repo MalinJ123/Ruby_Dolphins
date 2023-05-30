@@ -1,9 +1,9 @@
-import express, { application } from "express";
-import { getUserDb } from "../data/users/database.js";
+import express from "express";
+import { getDb } from "../data/database.js";
 import { isValidId, isValidUser } from "../data/validate.js";
 
 const router = express.Router();
-const db = getUserDb();
+const db = getDb();
 
 //	 X	 GET - User lista
 //	 X  GET - Users genom ID
@@ -77,10 +77,10 @@ router.post("/", async (req, res) => {
 
 // DELETE User
 router.delete("/all", async (req, res) => {
-	await db.read();
-	db.data.users = [];
-	await db.write();
-	res.sendStatus(200);
+    await db.read();
+    db.data.users = [];
+    await db.write();
+    res.sendStatus(200);
 })
 
 router.delete("/:id", async (req, res) => {
@@ -101,31 +101,31 @@ router.delete("/:id", async (req, res) => {
     }
 });
 
-    // Edit user
-    router.put("/:id", async (req, res) => {
-        await db.read();
+// Edit user
+router.put("/:id", async (req, res) => {
+    await db.read();
 
-        let editedUser = req.body
+    let editedUser = req.body
 
-        
-        let id = Number(req.params.id);
-        let oldUser = db.data.users.find((user) => user.id === id);
 
-        if (!isValidId(req.params.id)) {
-           return res.status(400).send("Ogitligt Id, Kontrollera att det endast är siffror och inte bokstäver");
-       }
+    let id = Number(req.params.id);
+    let oldUser = db.data.users.find((user) => user.id === id);
 
-        if (!oldUser){
-            return res.status(400).send("Kunde inte hitta användaren, kontrollera att Id  är korrekt");
-        } 
-            
-        oldUser.name = editedUser.name;
-        oldUser.password = editedUser.password;
+    if (!isValidId(req.params.id)) {
+        return res.status(400).send("Ogitligt Id, Kontrollera att det endast är siffror och inte bokstäver");
+    }
 
-        db.data.users[oldUser] = editedUser;
-        await db.write();
-        res.status(200).send(` Ändringen har Lyckats, här är resultatet ${JSON.stringify(editedUser)}`)
-    });
+    if (!oldUser) {
+        return res.status(400).send("Kunde inte hitta användaren, kontrollera att Id  är korrekt");
+    }
+
+    oldUser.name = editedUser.name;
+    oldUser.password = editedUser.password;
+
+    db.data.users[oldUser] = editedUser;
+    await db.write();
+    res.status(200).send(` Ändringen har Lyckats, här är resultatet ${JSON.stringify(editedUser)}`)
+});
 
 
 
