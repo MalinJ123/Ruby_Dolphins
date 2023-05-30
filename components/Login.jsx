@@ -1,9 +1,20 @@
 import "./Login.css";
 
+import { LoginContext } from "../src/Wrapper";
+import { useContext } from "react";
+
+
 const LoginForm = () => {
+    const {isLoggedIn, setIsLoggedIn} = useContext(LoginContext);
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        setIsLoggedIn(true)
+    }
+
     return (
         <>
-            <form action="submit">
+            <form onSubmit={handleSubmit}>
                 <div className="form-div">
                     <div className="form-header">
                     <h3>ADMIN</h3>

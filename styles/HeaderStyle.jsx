@@ -1,6 +1,28 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
+export const LoginNavLinkBtn = styled.button `
+	padding: 0px 8px;
+	border-radius: 6.75px;
+	height: 48px;
+	text-decoration: none;
+	font-weight: 600;
+	font-size: 18px;
+	justify-content: center;
+	align-items: center;
+	background-color: transparent;
+	text-transform: uppercase;
+	border: none;
+	outline: none;
+	cursor: pointer;
+
+    &:hover {
+		background-color: #232323;
+        color: #fff;
+    }
+`
+
+
 export const NavPlaceholder = styled.header`
 	width: 100%;
 	height: 48px;
