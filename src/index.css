@@ -13,11 +13,7 @@ html, body {
   padding: 0px;
 }
 
-/* Main */
-main {
-  height: 100%;
-  width: 100%;
-  float: left;
-  display: grid;
-  place-content: center;
+a.active {
+  background-color: #232323;
+  color: #f1f1f1;
 }
