@@ -191,6 +191,7 @@ function Header() {
 				)
 			}
 		</NavPlaceholder>
+        
         {showLoginForm && 
         <LoginForm/>
         
