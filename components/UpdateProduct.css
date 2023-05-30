@@ -1,0 +1,30 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1rem;
+    box-sizing: border-box;
+    border: solid 1px black;
+    width: 13rem;
+    height: 14rem;
+}
+.input-item{
+    width: 9rem;
+    height: 1.5rem;
+    display: flex;
+    margin: 0.4rem;
+}
+.form label {
+    margin: 0;
+}
+.add-file{
+    margin-left: 1rem;
+    
+
+}
+button{
+    padding: 0.5rem;
+    width: 5rem;
+    
+    margin: 1rem;
+}

@@ -1,68 +1,67 @@
 import { useState } from "react";
 import "./UpdateProduct.css";
-import { API_URL } from "../data/constants.js";
+import { updateProduct } from "../data/updateProduct.js";
+import { getProducts } from "../data/getProducts.js";
 
-const UpdateProduct = () => {
+const ToUpdateProduct = () => {
     const [product , setProduct] = useState({
         name: "",
         price: "",
         image: "",
-        id: ""
+        tags: "",
     });
 
-    const handleClick = (e) =>{
-      setProduct(e.target.value);    
-    }
+   getProducts.push(ToUpdateProduct)
 
-    async function updateProduct(product) {
-        const options ={
-            method: "PUT",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(product)
-        }
-        const response = await fetch( API_URL + 'products/', options)
-        const statusObject = await response.json()
-        console.log("response from Api",statusObject);
-    }
+    
 
     function handleProduct (){
         const changeItem ={
             name: product.name,
             price: product.price,
-            image: product.image
+            image: product.image,
+            tags: product.tags
         }
         updateProduct(changeItem)
     }
+
 
 
     
 
     return (
         <section>
-            <form action="" className="from"> 
-                <section> 
+            <form action="" className="form"> 
+                <section className="input-item input-name"> 
                     <label htmlFor=""></label>
-                    <input type="text" value={product}/> 
+                    <input type="text" placeholder="Name" value={product.name}
+                    onChange={(e) => setProduct({...product, name: e.target.value})}/> 
                 </section>
 
-                <section> 
+                <section className="input-item input-price"> 
                     <label htmlFor=""></label>
-                    <input type="number"  value={product}/> 
+                    <input type="number" placeholder="Price"  value={product.price}
+                    onChange={(e) => setProduct ({...product, price : e.target.value})}/> 
                 </section>
 
-                <section> 
+                <section className="input-item input-tags"> 
                     <label htmlFor=""></label>
-                    <input type="file" /> 
+                    <input type="text" placeholder="tags"  value={product.tags}
+                    onChange={(e) => setProduct ({...product, tags : e.target.value})}/> 
+                </section>
+
+                <section className="add-file"> 
+                    <label htmlFor=""></label>
+                    <input type="file" placeholder="file" value={product.image}
+                    onChange={(e) => setProduct({...product , image : e.target.value})}/> 
                 </section>
             
-                <button onClick={handleClick}></button>
+                <button onClick={handleProduct}>Click</button>
              </form>
         </section>
      
     )
 }
 
-export default UpdateProduct
+export default ToUpdateProduct
 
