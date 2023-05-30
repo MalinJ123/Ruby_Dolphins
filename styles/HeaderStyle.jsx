@@ -114,6 +114,7 @@ export const NavLinkBtn = styled(NavLink)`
 		color: #fff;
 		background-color: #232323;
 	}
+
 `;
 
 export const ImposterNavLinkBtn = styled.button`
@@ -161,6 +162,10 @@ export const LoginNavBtn = styled.button`
     &:hover {
 		background-color: #232323;
         color: #fff;
+    }
+
+	@media (orientation: portrait) {
+        display: none;
     }
 `;
 
