@@ -16,12 +16,15 @@
       "password": "cat"
     }
   ],
+
+
   "products": [
     {
       "id": 3,
       "name": "Grill",
       "price": 1299,
-      "image": "image3.jpg",
+      "image": "https://www.maritimefireplaces.com/wp-content/uploads/2021/03/LG1200BL_AngleLeft_Open.png",
+
       "tags": [
         "matlagning",
         "uteplats",
@@ -32,7 +35,7 @@
       "id": 4,
       "name": "Badmadrass",
       "price": 199,
-      "image": "image4.jpg",
+      "image": "https://www.childrenshouse.se/storage/5C2BFE5DF4ABC79DE727FEA507DFD5A7F078124E5B5D3F262ECF78551B923F1E/9f3f0989867e4969ac2049a016ca370a/jpg/media/14909beac1874912a073463ca3bc8327/44007X1-badmadrass.jpg",
       "tags": [
         "pool",
         "avkoppling",
@@ -43,7 +46,7 @@
       "id": 5,
       "name": "Hängmatta",
       "price": 599,
-      "image": "image5.jpg",
+      "image": "https://www.mcdn.net/images/products/55189.jpg?width=1920&height=1920&crop=false",
       "tags": [
         "avslappning",
         "trädgård",
@@ -54,7 +57,7 @@
       "id": 6,
       "name": "Volleybollnät",
       "price": 349,
-      "image": "image6.jpg",
+      "image": "https://exportpagescdn.net/v2/images/format-product-fullsize/7bb81f4f-5ee0-11ea-96d9-0cc47a40e97c/vollybolln%C3%A4t-fr%C3%A5n-manfred-huck-gmbh.jpg",
       "tags": [
         "strand",
         "sport",
@@ -65,7 +68,7 @@
       "id": 7,
       "name": "Vattenspridare",
       "price": 79,
-      "image": "image7.jpg",
+      "image": "https://www.wexthuset.com/images/products/kent-stowe/vattenspridare-flopro-plus-thyphoon.jpg",
       "tags": [
         "lek",
         "trädgård",
@@ -76,7 +79,7 @@
       "id": 8,
       "name": "Bikini",
       "price": 399,
-      "image": "image8.jpg",
+      "image": "https://img01.ztat.net/article/spp-media-p1/86687f3dee5b301eaa272060adc42ec8/b98ab80b2da74cb5b5cd20cc7537bfc5.jpg?imwidth=762&filter=packshot",
       "tags": [
         "badkläder",
         "strand",
@@ -87,7 +90,7 @@
       "id": 9,
       "name": "Solskyddskräm",
       "price": 149,
-      "image": "image9.jpg",
+      "image": "https://www.simbutiken.se/images/zoom/9102-141-solkrm_50.jpg",
       "tags": [
         "sol",
         "hudvård",
@@ -98,7 +101,7 @@
       "id": 10,
       "name": "Kubb",
       "price": 199,
-      "image": "image10.jpg",
+      "image": "https://img.bygghemma.se/pimages/93114__70764aae-a7c7-4c8e-9ef6-4e4752990e06.jpg?auto=format,compress&w=414&h=414&dpr=2&q=30",
       "tags": [
         "trädgård",
         "spel",
@@ -109,7 +112,7 @@
       "id": 11,
       "name": "Strandhandduk",
       "price": 249,
-      "image": "beach_towel.jpg",
+      "image": "https://handduksshoppen.se/wp-content/uploads/2021/04/Peniche-Hamamhandduk-Storm2-800x800.jpeg",
       "tags": [
         "strand",
         "sol",
@@ -120,7 +123,7 @@
       "id": 12,
       "name": "Solglasögon",
       "price": 199,
-      "image": "sunglasses.jpg",
+      "image": "https://imgproxy.johnhenric.com/preset:sharp/resize:fit:1250/gravity:nowe/quality:80/aHR0cHM6Ly9qb2huaGVucmljLmNlbnRyYWNkbi5uZXQvY2xpZW50L2R5bmFtaWMvaW1hZ2VzLzkyM185NWQ1ODFkYzQwLWEwMDk0NC0wOC1pbmZsdWVuY2VyLW9yaWdpbmFsLmpwZw==",
       "tags": [
         "sol",
         "accessoar",
@@ -131,7 +134,7 @@
       "id": 13,
       "name": "Sommarhatt",
       "price": 99,
-      "image": "summer_hat.jpg",
+      "image": "https://media.istockphoto.com/id/1175486758/sv/foto/afro-man-p%C3%A5-helgdagar-b%C3%A4r-sommarhatt-dricka-cocktail-%C3%B6ver-isolerad-vit-bakgrund-stressad-med.jpg?s=612x612&w=0&k=20&c=erdV2xs9f2x28-vPwDMRutJVGgDQcEOdK8zILO-lXq8=",
       "tags": [
         "sol",
         "accessoar",
@@ -142,7 +145,7 @@
       "id": 14,
       "name": "Grillverktygset",
       "price": 79,
-      "image": "grill_tools.jpg",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR29Ih9dY4nR1gqj68x67nmIeGH93kRxmvlxnH8sYOdsOmPfuaxmmX9VoXup7h1gnRgb00&usqp=CAU",
       "tags": [
         "grillning",
         "sommarfest",
@@ -153,7 +156,7 @@
       "id": 15,
       "name": "Badmintonset",
       "price": 129,
-      "image": "badminton_set.jpg",
+      "image": "https://cdn3.leksakscity.se/99015-thickbox_default/badmintonset-for-barn.jpg",
       "tags": [
         "sommaraktivitet",
         "trädgård",
@@ -164,7 +167,7 @@
       "id": 16,
       "name": "Picknickkorg",
       "price": 349,
-      "image": "picnic_basket.jpg",
+      "image": "https://m.media-amazon.com/images/I/916yfjeuozL._AC_UF1000,1000_QL80_.jpg",
       "tags": [
         "picknick",
         "utepils",
@@ -175,7 +178,7 @@
       "id": 17,
       "name": "Solskyddshatt",
       "price": 149,
-      "image": "sun_hat.jpg",
+      "image": "https://img.fruugo.com/product/3/26/476667263_max.jpg",
       "tags": [
         "sol",
         "skydd",
@@ -186,7 +189,7 @@
       "id": 18,
       "name": "Iskall dryckeshållare",
       "price": 59,
-      "image": "drink_holder.jpg",
+      "image": "https://cdn.shopify.com/s/files/1/0439/7082/2305/products/01_1_c6960ff2-3c94-4d28-a062-3e38a3d51960_480x480.jpg?v=1654597803",
       "tags": [
         "sommar",
         "strand",
@@ -197,7 +200,7 @@
       "id": 19,
       "name": "Flytväst",
       "price": 199,
-      "image": "life_jacket.jpg",
+      "image": "http://www.kajaksidan.se/cdn/shop/products/NRS-Oso-Flytvast_4e0c7f81-f0b9-46e4-b42e-20cbce9e5857.jpg?v=1629377860",
       "tags": [
         "vattensport",
         "säkerhet",
@@ -208,7 +211,7 @@
       "id": 20,
       "name": "Bärbar solstol",
       "price": 599,
-      "image": "portable_sun_chair.jpg",
+      "image": "https://m.media-amazon.com/images/I/61qMdAOvtpL._AC_UF1000,1000_QL80_.jpg",
       "tags": [
         "avkoppling",
         "stranden",
@@ -219,7 +222,7 @@
       "id": 21,
       "name": "Midsommarblomsterkrans",
       "price": 69,
-      "image": "midsummer_flower_crown.jpg",
+      "image": "https://bautawitch.files.wordpress.com/2012/06/midsommarkrans1.jpg?w=640",
       "tags": [
         "midsommar",
         "fest",
@@ -229,7 +232,7 @@
     {
       "id": 164,
       "name": "Banan",
-      "image": "morot.jpg",
+      "image": "https://static.mathem.se/shared/images/products/large/banan-eko-klass1-4.jpg",
       "price": 5,
       "tags": [
         "crunchy",
@@ -239,7 +242,7 @@
     {
       "id": 966,
       "name": "TEGELSTEEEn",
-      "image": "image2.jpg",
+      "image": "https://thumbs.dreamstime.com/b/tegelsten-18182120.jpg",
       "price": 200,
       "tags": [
         "sol",
