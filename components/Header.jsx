@@ -121,6 +121,27 @@ const ImposterNavLinkBtn = styled.button`
     }
 `
 
+const LoginNavBtn = styled.button`
+	padding: 0px 8px;
+	border-radius: 6.75px;
+	height: 48px;
+	text-decoration: none;
+	font-weight: 600;
+	font-size: 18px;
+	justify-content: center;
+	align-items: center;
+	background-color: transparent;
+	text-transform: uppercase;
+	border: none;
+	outline: none;
+	cursor: pointer;
+
+    &:hover {
+		background-color: #232323;
+        color: #fff;
+    }
+`;
+
 const NavMobileBox = styled.div`
 	height: calc(100vh - 48px);
 	margin-top: 48px;
@@ -155,7 +176,7 @@ function Header() {
 				</NavLogoBox>
 				<NavActionBox>
 					<ImposterNavLinkBtn  onClick={() => setShowMobileNav(!showMobileNav)} title="Meny"><span className="material-symbols-outlined">menu</span></ImposterNavLinkBtn>
-					<NavLinkBtn to="/login"><span className="material-symbols-outlined">login</span></NavLinkBtn>
+					<LoginNavBtn ><span className="material-symbols-outlined">login</span></LoginNavBtn>
 				</NavActionBox>
 			</NavBody>
 			{
