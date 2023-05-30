@@ -40,8 +40,8 @@ const NavActionBox = styled.div`
 	margin-right: 15px;
 
 	@media (orientation: portrait) {
-        width: 30vw;
-		margin-right: 0px;
+        width: calc(30vw - 15px);
+		margin-right: 15px;
     }
 `;
 
@@ -53,7 +53,9 @@ const NavLogoBox = styled.div`
 	height: 100%;
 
 	@media (orientation: portrait) {
-        width: 70vw;
+        width: calc(70vw - 15px);
+		justify-content: left;
+		margin-left: 15px;
     }
 `;
 
