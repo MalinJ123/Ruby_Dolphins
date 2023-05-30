@@ -1,5 +1,7 @@
 import { useState } from "react";
 import {NavActionBox, NavBody, NavLinkBtn, NavLogo, NavLogoBox, NavMobileBox, NavPlaceholder, NavSideBox, ImposterNavLinkBtn, LoginNavBtn} from "../styles/HeaderStyle";
+import LoginForm from "./Login";
+import "./Header.css"
 
 function NavLinks() {
 	return (
