@@ -23,7 +23,7 @@ const NavBody = styled.nav`
 const NavSideBox = styled.div`
     display: flex;
 	flex-flow: row wrap;
-	width: calc(35vw - 15px);
+	width: calc(25vw - 15px);
 	height: 100%;
 	margin-left: 15px;
 
@@ -49,7 +49,7 @@ const NavLogoBox = styled.div`
     display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 40vw;
+	width: 50vw;
 	height: 100%;
 
 	@media (orientation: portrait) {
@@ -99,7 +99,6 @@ const ImposterNavLinkBtn = styled.button`
 	text-decoration: none;
 	font-weight: 600;
 	font-size: 18px;
-	display: grid;
 	justify-content: center;
 	align-items: center;
 	background-color: transparent;
@@ -150,7 +149,7 @@ function Header() {
 					<NavLinks />
 				</NavSideBox>
 				<NavLogoBox>
-					<NavLogo to="/">Sommarprodukter</NavLogo>
+					<NavLogo to="/">Oceanen</NavLogo>
 				</NavLogoBox>
 				<NavActionBox>
 					<ImposterNavLinkBtn  onClick={() => setShowMobileNav(!showMobileNav)} title="Meny"><span className="material-symbols-outlined">menu</span></ImposterNavLinkBtn>
