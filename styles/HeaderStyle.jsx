@@ -63,10 +63,11 @@ export const NavLogo = styled(NavLink)`
 	font-size: 24px;
 	font-weight: 800;
 	text-decoration: none;
-	color: #000;
+	color: #000 !important;
 	height: 48px;
 	display: grid;
 	align-items: center;
+	background-color: transparent !important;
 
 	@media (orientation: portrait) {
         font-size: 20px;
@@ -85,8 +86,8 @@ export const NavLinkBtn = styled(NavLink)`
 	justify-content: center;
 	align-items: center;
 	text-transform: uppercase;
-	
 	color: #000;
+
 	&:hover {
 		color: #fff;
 		background-color: #232323;
