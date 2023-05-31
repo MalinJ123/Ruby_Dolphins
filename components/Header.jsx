@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import {NavActionBox, NavBody, LoginNavLinkBtn, NavLinkBtn, NavLogo, NavLogoBox, NavMobileBox, NavPlaceholder, NavSideBox, ImposterNavLinkBtn, LoginNavBtn} from "../styles/HeaderStyle";
 import LoginForm from "./Login";
 import "./Header.css"
-import { LoginContext } from "../src/Wrapper";
+import { LoginContext } from "../src/ContextRoot";
 
 function NavLinks() {
 	return (

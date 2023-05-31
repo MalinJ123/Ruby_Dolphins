@@ -2,7 +2,7 @@ import {useState, createContext} from "react"
 
 export const LoginContext = createContext()
 
-const Wrapper = ({children}) => {
+const ContextRoot = ({children}) => {
     const [isLoggedIn, setIsLoggedIn] = useState(false)
 
     return (
@@ -12,4 +12,4 @@ const Wrapper = ({children}) => {
     )
 }
 
-export default Wrapper
+export default ContextRoot
