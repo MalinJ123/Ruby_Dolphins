@@ -9,7 +9,7 @@ function Products() {
 	const productData = useLoaderData();
 	const [searchTerm, setSearchTerm] = useState("");
 
-	const handleChange = () => {
+	const handleChange = (event) => {
 		setSearchTerm(event.target.value);
 	};
 
