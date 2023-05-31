@@ -11,6 +11,8 @@ const LoginForm = () => {
         e.preventDefault()
         setIsLoggedIn(true)
     }
+    
+
 
     return (
         <>
@@ -30,7 +32,7 @@ const LoginForm = () => {
                         <label htmlFor="password">Lösenord</label>
                         <input id="password" type="password" />
                     </div>
-                    <button className="login-btn">Logga in</button>
+                    <button  className="login-btn">Logga in</button>
                 </div>
             </form>
         </>
