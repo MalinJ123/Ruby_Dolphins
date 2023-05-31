@@ -1,18 +1,25 @@
-.form {
+form {
+    margin-top: 4em;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    z-index: 1;
+}
+.update-form-div{
+    width: 20%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    margin: 1rem;
-    box-sizing: border-box;
-    border: solid 1px black;
-    width: 13rem;
-    height: 14rem;
+    background-color: rgb(104, 102, 102);
+    padding: 4em;
+    border-radius: 10px;
+    gap: 1em;
+    color: white;
 }
-.input-item{
-    width: 9rem;
-    height: 1.5rem;
+
+.update-input-div{
     display: flex;
-    margin: 0.4rem;
+    flex-direction: column;
+
 }
 .form label {
     margin: 0;
