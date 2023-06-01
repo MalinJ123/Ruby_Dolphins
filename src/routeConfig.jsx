@@ -5,6 +5,7 @@ import Root from "../routes/Root";
 import Start from "../routes/Start";
 import Products, {loader as productsLoader} from "../routes/Products";
 import Users, {loader as userLoader} from "../routes/Users";
+import ToUpdateProduct from "../components/UpdateProduct";
 
 
 const router = createBrowserRouter([
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
                 path: '/users',
                 element: <Users />,
                 loader: userLoader
+            },
+            {
+                path: '/products/update',
+                element: <ToUpdateProduct />,
             }
         ]
     }

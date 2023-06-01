@@ -4,55 +4,9 @@
       "id": 1,
       "name": "Admin",
       "password": "mums"
-    },
-    {
-      "id": 2,
-      "name": "Alibaba",
-      "password": "password"
-    },
-    {
-      "id": 3,
-      "name": "Alice in wonderland",
-      "password": "cat"
     }
   ],
-
-
-
   "products": [
-    {
-      "id": 1,
-      "name": "Grill",
-      "price": 1299,
-      "image": "https://www.elgiganten.se/resource/responsive-image/1997596/4-col-tile/desktop/5/600/360/sda-grill-charcoal-grill.jpg",
-      "tags": [
-        "matlagning",
-        "uteplats",
-        "sommarfest"
-      ]
-    },
-    {
-      "id": 2,
-      "name": "Badmadrass",
-      "price": 199,
-      "image": "https://www.childrenshouse.se/storage/5C2BFE5DF4ABC79DE727FEA507DFD5A7F078124E5B5D3F262ECF78551B923F1E/9f3f0989867e4969ac2049a016ca370a/jpg/media/14909beac1874912a073463ca3bc8327/44007X1-badmadrass.jpg",
-      "tags": [
-        "pool",
-        "avkoppling",
-        "semester"
-      ]
-    },
-    {
-      "id": 3,
-      "name": "Hängmatta",
-      "price": 599,
-      "image": "https://www.mcdn.net/images/products/55189.jpg?width=1920&height=1920&crop=false",
-      "tags": [
-        "avslappning",
-        "trädgård",
-        "siesta"
-      ]
-    },
     {
       "id": 4,
       "name": "Volleybollnät",
@@ -240,7 +194,5 @@
         "mode"
       ]
     }
-    
-    
   ]
 }

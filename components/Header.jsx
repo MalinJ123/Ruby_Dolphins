@@ -3,6 +3,7 @@ import {NavActionBox, NavBody, LoginNavLinkBtn, NavLinkBtn, NavLogo, NavLogoBox,
 import LoginForm from "./Login";
 import "./Header.css"
 import { LoginContext } from "../src/ContextRoot";
+import SettingsNavBar from "./SettingsNav";
 
 function NavLinks() {
 	return (
@@ -15,9 +16,11 @@ function NavLinks() {
 
 function Header() {
 	const [showMobileNav, setShowMobileNav] = useState(false);
-	const [showLoginForm, setShowLoginForm] = useState(false);
+	const [showAdminSettings, setShowAdminSettings] = useState(false);
 
-	const {isLoggedIn, setIsLoggedIn} = useContext(LoginContext);
+    const {showLoginForm, setShowLoginForm} = useContext(LoginContext);
+
+	const {isLoggedIn} = useContext(LoginContext);
 
 	return (
         <div className="header-div">
@@ -34,7 +37,7 @@ function Header() {
 					<LoginNavBtn onClick={() => setShowLoginForm(!showLoginForm)}  ><span className="material-symbols-outlined">login</span></LoginNavBtn>
 					{
 						isLoggedIn && (
-							<LoginNavLinkBtn>
+							<LoginNavLinkBtn onClick={() => setShowAdminSettings(!showAdminSettings)} >
 								<span className="material-symbols-outlined">settings</span>
 							</LoginNavLinkBtn>
 						)
@@ -50,8 +53,14 @@ function Header() {
 			}
 		</NavPlaceholder>
         
-        {showLoginForm && 
-        <LoginForm/>
+        {showLoginForm &&  
+			<LoginForm/>
+
+        }
+
+
+        {showAdminSettings && 
+        <SettingsNavBar/>
         
         }
             </div>

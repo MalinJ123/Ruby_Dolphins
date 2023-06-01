@@ -2,23 +2,31 @@ import "./Login.css";
 
 import { LoginContext } from "../src/ContextRoot";
 import { useContext } from "react";
+import { NavLink, Link } from "react-router-dom";
 
 
 const LoginForm = () => {
     const {isLoggedIn, setIsLoggedIn} = useContext(LoginContext);
+    const {setShowLoginForm} = useContext(LoginContext);
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        setIsLoggedIn(true)
     }
+    
+    const handleClick = () => {
+        setShowLoginForm(false)
+        setIsLoggedIn(true)
+        console.log("Inloggad? ", isLoggedIn);
+    }
+    
+
 
     return (
         <>
-            <form onSubmit={handleSubmit}>
+            <form className="main-form" onSubmit={handleSubmit}>
                 <div className="form-div">
                     <div className="form-header">
                     <h3>ADMIN</h3>
-
                     </div>
 
                     <div className="input-div">
@@ -30,7 +38,12 @@ const LoginForm = () => {
                         <label htmlFor="password">Lösenord</label>
                         <input id="password" type="password" />
                     </div>
-                    <button className="login-btn">Logga in</button>
+
+                    <div className="login-div">
+                   <Link to="/products">
+                   <button onClick={handleClick} type="submit" className="login-btn">Logga in</button>
+                    </Link> 
+                    </div>
                 </div>
             </form>
         </>
