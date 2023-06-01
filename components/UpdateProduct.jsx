@@ -45,7 +45,8 @@ const ToUpdateProduct = () => {
 
     return (
         <section>
-            <form onSubmit={handleProduct} className="form"> 
+            <form onSubmit={handleProduct} className="update-form"> 
+            
             <div className="update-form-div">
 
                 
@@ -55,6 +56,7 @@ const ToUpdateProduct = () => {
                     onChange={(e) => setProduct({...product, id: e.target.value})}/> 
 
                 </div>
+
                 <div className="update-input-div">
                     <label htmlFor="product-name">Produktnamn: </label>
                     <input id="product-name" type="text" placeholder="Name" 
@@ -89,7 +91,7 @@ const ToUpdateProduct = () => {
                 </div>
                
                 
-                <button type="submit">Click</button>
+                <button className="edit-btn" type="submit">Click</button>
                     </div>
              </form>
         </section>

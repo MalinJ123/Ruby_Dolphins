@@ -1,17 +1,27 @@
 import { useLoaderData, Link } from "react-router-dom";
 import "../stylesheet/products.css";
 import { getProducts } from "../data/getProducts";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { LoginContext } from "../src/ContextRoot";
+import { clearProduct } from "../data/clearProduct";
+// import DeleteProduct from "./ClearProduct";
 
 export const loader = () => getProducts();
 
 function Products() {
+	const {isLoggedIn, setIsLoggedIn} = useContext(LoginContext);
 	const productData = useLoaderData();
 	const [searchTerm, setSearchTerm] = useState("");
 
 	const handleChange = (event) => {
 		setSearchTerm(event.target.value);
 	};
+
+
+    async function handleOnClick(productId){
+        const result = await clearProduct(productId)
+      }
+  
 
 	return (
 		<div>
@@ -37,13 +47,8 @@ function Products() {
 					)
 					.map((product) => (
 						<div className="product" key={product.id}>
-							<h3 className="">
-								<Link
-									className="products-title"
-									to={`/products/${product.id}`}
-								>
+							<h3 className="products-title">
 									{product.name}
-								</Link>
 							</h3>
 							<img
 								className="products-pic"
@@ -57,6 +62,16 @@ function Products() {
 								<p>Taggar: {product.tags.join(", ")}</p>
 
 							</div>
+                            {isLoggedIn &&
+							<div className="admin-div">
+							<Link to="/products/update"> <button className="admin-btn">Uppdatera</button> </Link>
+
+                            <button onClick={ () => handleOnClick(product.id) } className="admin-btn"> Ta bort</button>
+							
+
+							</div>
+                            
+                            }
 						</div>
 					))}
 			</div>

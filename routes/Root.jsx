@@ -6,7 +6,6 @@ const Root = () => (
     <>
         <Header />
         <Main />
-        <ToUpdateProduct />
         
     </>
 )

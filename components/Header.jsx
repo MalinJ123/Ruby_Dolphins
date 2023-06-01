@@ -16,10 +16,11 @@ function NavLinks() {
 
 function Header() {
 	const [showMobileNav, setShowMobileNav] = useState(false);
-	const [showLoginForm, setShowLoginForm] = useState(false);
 	const [showAdminSettings, setShowAdminSettings] = useState(false);
 
-	const {isLoggedIn, setIsLoggedIn} = useContext(LoginContext);
+    const {showLoginForm, setShowLoginForm} = useContext(LoginContext);
+
+	const {isLoggedIn} = useContext(LoginContext);
 
 	return (
         <div className="header-div">
@@ -52,10 +53,12 @@ function Header() {
 			}
 		</NavPlaceholder>
         
-        {showLoginForm && 
-        <LoginForm/>
-        
+        {showLoginForm &&  
+			<LoginForm/>
+
         }
+
+
         {showAdminSettings && 
         <SettingsNavBar/>
         
