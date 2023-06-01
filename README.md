@@ -2,7 +2,7 @@
 
 ## Ruby Dolphins Frontend
 
-This repository contains the frontend code for the Ruby Dolphins project. The Ruby Dolphins project is a full-stack web application built using HTML, CSS, and JavaScript. It aims to provide a platform for retrieving RESTful APIs related to products and users.
+This repository contains the frontend code for the Ruby Dolphins project. This project was created by four students who are currently studying Frontend development. It serves as their first project where they have ventured into the realm of Fullstack development. The Ruby Dolphins project is a full-stack web application built using HTML, CSS, React and JavaScript. It aims to provide a platform for retrieving RESTful APIs related to products and users.
 
 ### Getting Started
 
@@ -27,13 +27,13 @@ To get started with the Ruby Dolphins frontend, follow the instructions below:
 
 The Ruby Dolphins frontend offers the following features:
 
-1.  Product Information: Retrieve and display information about various products available through the RESTful API.
+1.  Product Information: Retrieve and display information about various products available through the RESTfull API.
 2.  User Details: Fetch and show details of users registered on the platform.
 3.  Interactive UI: Enjoy a user-friendly interface with intuitive navigation and visually appealing design.
 
 ### Development
 
-To run the frontend in development mode, simply open the `index.html` file in your preferred web browser. Any changes you make to the code can be tested and previewed directly in the browser.
+To run the frontend in development mode, simply open the `index.html` file in your preferred web browser(recomended google chrome). Any changes you make to the code can be tested and previewed directly in the browser.
 
 ### Production Deployment
 
