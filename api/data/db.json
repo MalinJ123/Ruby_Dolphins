@@ -14,17 +14,19 @@
       "id": 3,
       "name": "Alice in wonderland",
       "password": "cat"
+    },
+    {
+      "id": 1419,
+      "name": "Admin",
+      "password": "mums"
     }
   ],
-
-
   "products": [
     {
       "id": 3,
       "name": "Grill",
       "price": 1299,
       "image": "https://www.elgiganten.se/resource/responsive-image/1997596/4-col-tile/desktop/5/600/360/sda-grill-charcoal-grill.jpg",
-
       "tags": [
         "matlagning",
         "uteplats",
