@@ -15,7 +15,7 @@ async function deletUser(userId) {
         body: JSON.stringify(data)
         
     }
-    const response = await fetch(API_URL + 'users/', options );
+    const response = await fetch(API_URL + 'users/' + userId, options );
    const statusObject = await response.json()
     console.log('Response: ', data);
     if (statusObject){

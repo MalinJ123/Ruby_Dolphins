@@ -4,21 +4,8 @@
       "id": 1,
       "name": "Admin",
       "password": "mums"
-    },
-    {
-      "id": 2,
-      "name": "Alibaba",
-      "password": "password"
-    },
-    {
-      "id": 3,
-      "name": "Alice in wonderland",
-      "password": "cat"
     }
   ],
-
-
-
   "products": [
     {
       "id": 1,
@@ -240,7 +227,5 @@
         "mode"
       ]
     }
-    
-    
   ]
 }
