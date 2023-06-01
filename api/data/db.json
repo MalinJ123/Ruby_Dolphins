@@ -19,13 +19,11 @@
   "products": [
     {
       "id": 3,
-      "name": "Grill",
-      "price": 1299,
-      "image": "image3.jpg",
+      "name": "hallo",
+      "price": 10,
+      "image": "asdf ",
       "tags": [
-        "matlagning",
-        "uteplats",
-        "sommarfest"
+        "bad"
       ]
     },
     {
