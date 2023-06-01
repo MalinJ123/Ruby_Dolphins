@@ -20,9 +20,29 @@ router.get("/", async (req, res) => {
         res.send(users);
     } catch (error) {
         console.log("Detta är vad vi får tillbaka i user-listan", error);
-        res.status(500).send("An error occurred while retrieving users.");
+        res.status(500).send("Ett fel inträffade med att hämta användarna.");
     }
 });
+
+// Fejk POST - Är till för att användare ska kunna logga in i sidan
+router.post("/login", async (req, res) => {
+    await db.read()
+        const users = db.data.users;
+        const userName = req.body.name;
+        const userPassword = req.body.password;
+        
+        const getUser = users.find((user) => user.name === userName && user.password === userPassword);
+
+        console.log(getUser);
+
+        if (!getUser) {
+            res.status(404).send("Användaruppgifter ofullständiga.");
+        } else {
+            res.send({status: "Inloggad"})
+        }
+ 
+}
+)
 
 //GET Users - med ID
 router.get("/:id", async (req, res) => {

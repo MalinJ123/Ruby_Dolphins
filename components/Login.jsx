@@ -1,24 +1,49 @@
 import "./Login.css";
 
 import { LoginContext } from "../src/ContextRoot";
-import { useContext } from "react";
-import { NavLink, Link } from "react-router-dom";
+import { useContext, useState } from "react";
+import { Link } from "react-router-dom";
+
+import loginUser from "../data/loginUser";
 
 
 const LoginForm = () => {
+    const [userName, setUserName] = useState("");
+    const [userPassword, setUserPassword] = useState("");
+
     const {isLoggedIn, setIsLoggedIn} = useContext(LoginContext);
     const {setShowLoginForm} = useContext(LoginContext);
 
-    const handleSubmit = (e) => {
+    const handleSubmit =  (e) => {
         e.preventDefault()
+
     }
     
-    const handleClick = () => {
-        setShowLoginForm(false)
-        setIsLoggedIn(true)
+    const handleClick = async () => {
+
         console.log("Inloggad? ", isLoggedIn);
+
+        const loginStatus = await loginUser({name: userName, password: userPassword})
+
+        console.log(loginStatus);
+        
+        if (loginStatus.loggedIn === "Inloggad") {
+            setIsLoggedIn(true)
+            setShowLoginForm(false)
+        } else {
+            console.log("Felaktiga inloggningsuppgifter");
+        }
     }
     
+
+
+    const handleUserNameChange = (e) => {
+        setUserName(e.target.value)
+    }
+
+    const handleUserPasswordChange = (e) => {
+        setUserPassword(e.target.value)
+    }
 
 
     return (
@@ -31,12 +56,12 @@ const LoginForm = () => {
 
                     <div className="input-div">
                         <label htmlFor="name">Användarnamn</label>
-                        <input id="name" type="text" />
+                        <input id="name" type="text" value={userName} onChange={handleUserNameChange} />
                     </div>
 
                     <div className="input-div">
                         <label htmlFor="password">Lösenord</label>
-                        <input id="password" type="password" />
+                        <input id="password" type="password" value={userPassword} onChange={handleUserPasswordChange} />
                     </div>
 
                     <div className="login-div">
