@@ -18,6 +18,12 @@ const LoginForm = () => {
         const loginStatus = await loginUser({name: userName, password: userPassword})
 
         console.log(loginStatus);
+        
+        if (loginStatus.loggedIn === "Inloggad") {
+            setIsLoggedIn(true)
+        } else {
+            console.log("Felaktiga inloggningsuppgifter");
+        }
     }
 
     const handleUserNameChange = (e) => {
