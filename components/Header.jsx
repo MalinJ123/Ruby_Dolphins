@@ -1,43 +1,61 @@
-import { NavLink } from "react-router-dom";
-import styled from "styled-components";
+import { useContext, useState } from "react";
+import {NavActionBox, NavBody, LoginNavLinkBtn, NavLinkBtn, NavLogo, NavLogoBox, NavMobileBox, NavPlaceholder, NavSideBox, ImposterNavLinkBtn, LoginNavBtn} from "../styles/HeaderStyle";
+import LoginForm from "./Login";
+import "./Header.css"
+import { LoginContext } from "../src/ContextRoot";
 
-const Head = styled.header`
-	display: flex;
-	width: 100%;
-	height: 52px;
-	float: left;
-`;
-
-const Nav = styled.nav`
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-	height: 52px;
-	position: fixed;
-	top: 0;
-	left: 0;
-	background-color: #f7f7f7;
-`;
-
-const Link = styled(NavLink)`
-	padding: 0px 12px;
-	border-radius: 5.75px;
-
-	&:hover {
-		color: #fff;
-		background-color: #232323;
-	}
-`;
+function NavLinks() {
+	return (
+		<>
+			<NavLinkBtn to="/">Hem</NavLinkBtn>
+			<NavLinkBtn to="/products">Produkter</NavLinkBtn>
+		</>
+	)
+}
 
 function Header() {
+	const [showMobileNav, setShowMobileNav] = useState(false);
+	const [showLoginForm, setShowLoginForm] = useState(false);
+
+	const {isLoggedIn, setIsLoggedIn} = useContext(LoginContext);
+
 	return (
-		<Head>
-			<Nav>
-				<Link to="/">Hem</Link>
-				<Link to="/products">Produkter</Link>
-			</Nav>
-		</Head>
+        <div className="header-div">
+		<NavPlaceholder>
+			<NavBody>
+				<NavSideBox>
+					<NavLinks />
+				</NavSideBox>
+				<NavLogoBox>
+					<NavLogo to="/">Oceanen</NavLogo>
+				</NavLogoBox>
+				<NavActionBox>
+					<ImposterNavLinkBtn  onClick={() => setShowMobileNav(!showMobileNav)} title="Meny"><span className="material-symbols-outlined">menu</span></ImposterNavLinkBtn>
+					<LoginNavBtn onClick={() => setShowLoginForm(!showLoginForm)}  ><span className="material-symbols-outlined">login</span></LoginNavBtn>
+					{
+						isLoggedIn && (
+							<LoginNavLinkBtn>
+								<span className="material-symbols-outlined">settings</span>
+							</LoginNavLinkBtn>
+						)
+					}
+				</NavActionBox>
+			</NavBody>
+			{
+                showMobileNav &&(
+                    <NavMobileBox>
+						<NavLinks />
+					</NavMobileBox>
+				)
+			}
+		</NavPlaceholder>
+        
+        {showLoginForm && 
+        <LoginForm/>
+        
+        }
+            </div>
+
 	);
 }
 

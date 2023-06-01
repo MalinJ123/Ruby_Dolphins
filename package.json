@@ -26,6 +26,8 @@
   },
   "homepage": "https://github.com/MalinJ123/Ruby_Dolphins#readme",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.4.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@vitejs/plugin-react-swc": "^3.3.1",
     "express": "^4.18.2",
     "lowdb": "^6.0.1",
