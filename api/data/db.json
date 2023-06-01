@@ -8,14 +8,12 @@
   ],
   "products": [
     {
-      "id": 1,
-      "name": "Grill",
-      "price": 1299,
-      "image": "https://www.elgiganten.se/resource/responsive-image/1997596/4-col-tile/desktop/5/600/360/sda-grill-charcoal-grill.jpg",
+      "id": 3,
+      "name": "Mlin",
+      "price": 110,
+      "image": "dgasdgasdg",
       "tags": [
-        "matlagning",
-        "uteplats",
-        "sommarfest"
+        "basd"
       ]
     },
     {
