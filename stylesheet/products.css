@@ -1,0 +1,121 @@
+.start-title{
+	/* border: 2px solid black; */
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+.start-message{
+	/* border: 1px solid black;  */
+	padding: 3em;
+
+	background: rgb(208,223,37);
+	background: linear-gradient(128deg, rgb(208, 227, 0) 0%, rgb(68, 146, 80) 100%);
+	padding: 4em;
+	/* box-shadow: 0 2px 4px rgba(0, 0, 0, 10.1); */
+	border-radius: 8px;
+	align-items: center;
+}
+
+
+/* -------------- slut på start sida ------------------- */
+
+.products-body {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.search-bar{
+	display: flex;
+	justify-content: flex-end;
+	border-radius: 15%;
+	margin: 1em 2em 0em 0em;
+}
+
+.grid-container {
+	display: flex;
+	grid-gap: 20px;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: 2em 3em; 
+}
+.produkt{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 1em;
+	height: 3em;
+	border: 1px solid black;
+	color: white;
+	background: rgba(0, 0, 0, 0.703);
+
+
+}
+.product {
+    width: 250px ;
+    display: flex;
+    flex-direction: column;
+    background: rgb(208,223,37);
+    background: linear-gradient(128deg, rgb(208, 227, 0) 0%, rgb(68, 146, 80) 100%);
+	padding: 2em;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 10.1);
+	border-radius: 8px;
+    align-items: center;
+}
+
+
+.products-pic {
+	max-width: 200px;
+	height: 14em;
+	margin-bottom: 1em;
+	justify-content: center;
+	border: 1px solid gray;
+    border-radius: 5px;
+	
+}
+.products-title {
+    margin-bottom: .5em;
+	text-decoration: none;
+	color: black;
+    transition: transform 1s;
+}
+.products-title:hover {
+	transform: scale(1.2);
+}
+
+.product-price {
+	font-weight: bold;
+}
+
+.tags{
+	margin-top: 1em;
+}
+
+
+.admin-div{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 1em;
+    margin-top: 1em;
+}
+.admin-btn{
+    background-color: rgb(27, 26, 26);
+    color: white;
+    border: none;
+    font-size: 13px;
+    padding: .4em 1em;
+    border-radius: 4px;
+    cursor: pointer;
+    align-self: center;
+}
+.admin-btn:hover{
+    background-color: white;
+    color: rgb(27, 26, 26);
+}
+
+
+
+
+
+
+

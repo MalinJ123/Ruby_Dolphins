@@ -1,0 +1,235 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "admin",
+      "password": "mums"
+    },
+    {
+      "id": 997,
+      "name": "muu",
+      "password": "loo"
+    },
+    {
+      "id": 2162,
+      "name": "asfasf",
+      "password": "asfasf"
+    }
+  ],
+  "products": [
+    {
+      "id": 4,
+      "name": "Volleybollnät",
+      "price": 349,
+      "image": "https://exportpagescdn.net/v2/images/format-product-fullsize/7bb81f4f-5ee0-11ea-96d9-0cc47a40e97c/vollybolln%C3%A4t-fr%C3%A5n-manfred-huck-gmbh.jpg",
+      "tags": [
+        "strand",
+        "sport",
+        "aktivitet"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Vattenspridare",
+      "price": 79,
+      "image": "https://www.wexthuset.com/images/products/kent-stowe/vattenspridare-flopro-plus-thyphoon.jpg",
+      "tags": [
+        "lek",
+        "trädgård",
+        "vatten"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Bikini",
+      "price": 399,
+      "image": "https://img01.ztat.net/article/spp-media-p1/86687f3dee5b301eaa272060adc42ec8/b98ab80b2da74cb5b5cd20cc7537bfc5.jpg?imwidth=762&filter=packshot",
+      "tags": [
+        "badkläder",
+        "strand",
+        "mode"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Solskyddskräm",
+      "price": 149,
+      "image": "https://www.simbutiken.se/images/zoom/9102-141-solkrm_50.jpg",
+      "tags": [
+        "sol",
+        "hudvård",
+        "skydd"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Kubb",
+      "price": 199,
+      "image": "https://img.bygghemma.se/pimages/93114__70764aae-a7c7-4c8e-9ef6-4e4752990e06.jpg?auto=format,compress&w=414&h=414&dpr=2&q=30",
+      "tags": [
+        "trädgård",
+        "spel",
+        "sommarkväll"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Strandhandduk",
+      "price": 249,
+      "image": "https://handduksshoppen.se/wp-content/uploads/2021/04/Peniche-Hamamhandduk-Storm2-800x800.jpeg",
+      "tags": [
+        "strand",
+        "sol",
+        "bad"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Solglasögon",
+      "price": 199,
+      "image": "https://imgproxy.johnhenric.com/preset:sharp/resize:fit:1250/gravity:nowe/quality:80/aHR0cHM6Ly9qb2huaGVucmljLmNlbnRyYWNkbi5uZXQvY2xpZW50L2R5bmFtaWMvaW1hZ2VzLzkyM185NWQ1ODFkYzQwLWEwMDk0NC0wOC1pbmZsdWVuY2VyLW9yaWdpbmFsLmpwZw==",
+      "tags": [
+        "sol",
+        "accessoar",
+        "mode"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Sommarhatt",
+      "price": 99,
+      "image": "https://media.istockphoto.com/id/1175486758/sv/foto/afro-man-p%C3%A5-helgdagar-b%C3%A4r-sommarhatt-dricka-cocktail-%C3%B6ver-isolerad-vit-bakgrund-stressad-med.jpg?s=612x612&w=0&k=20&c=erdV2xs9f2x28-vPwDMRutJVGgDQcEOdK8zILO-lXq8=",
+      "tags": [
+        "sol",
+        "accessoar",
+        "mode"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Grillverktygset",
+      "price": 79,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR29Ih9dY4nR1gqj68x67nmIeGH93kRxmvlxnH8sYOdsOmPfuaxmmX9VoXup7h1gnRgb00&usqp=CAU",
+      "tags": [
+        "grillning",
+        "sommarfest",
+        "matlagning"
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Badmintonset",
+      "price": 129,
+      "image": "https://cdn3.leksakscity.se/99015-thickbox_default/badmintonset-for-barn.jpg",
+      "tags": [
+        "sommaraktivitet",
+        "trädgård",
+        "lek"
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Picknickkorg",
+      "price": 349,
+      "image": "https://m.media-amazon.com/images/I/916yfjeuozL._AC_UF1000,1000_QL80_.jpg",
+      "tags": [
+        "picknick",
+        "utepils",
+        "sommarutflykt"
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Solskyddshatt",
+      "price": 149,
+      "image": "https://img.fruugo.com/product/3/26/476667263_max.jpg",
+      "tags": [
+        "sol",
+        "skydd",
+        "accessoar"
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Iskall dryckeshållare",
+      "price": 59,
+      "image": "https://cdn.shopify.com/s/files/1/0439/7082/2305/products/01_1_c6960ff2-3c94-4d28-a062-3e38a3d51960_480x480.jpg?v=1654597803",
+      "tags": [
+        "sommar",
+        "strand",
+        "dryck"
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Flytväst",
+      "price": 199,
+      "image": "http://www.kajaksidan.se/cdn/shop/products/NRS-Oso-Flytvast_4e0c7f81-f0b9-46e4-b42e-20cbce9e5857.jpg?v=1629377860",
+      "tags": [
+        "vattensport",
+        "säkerhet",
+        "sommaraktivitet"
+      ]
+    },
+    {
+      "id": 18,
+      "name": "Bärbar solstol",
+      "price": 599,
+      "image": "https://m.media-amazon.com/images/I/61qMdAOvtpL._AC_UF1000,1000_QL80_.jpg",
+      "tags": [
+        "avkoppling",
+        "stranden",
+        "solstol"
+      ]
+    },
+    {
+      "id": 19,
+      "name": "Midsommarblomsterkrans",
+      "price": 69,
+      "image": "https://bautawitch.files.wordpress.com/2012/06/midsommarkrans1.jpg?w=640",
+      "tags": [
+        "midsommar",
+        "fest",
+        "accessoar"
+      ]
+    },
+    {
+      "id": 20,
+      "name": "Annanas-Solglasögon",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc4nym3xxRrSFEh82dRuxziBCIymqxCv2FO7VDr8Yp3j3R0L7ETmrgv5VJm1HYfHXCCQQ&usqp=CAU",
+      "price": 29,
+      "tags": [
+        "motiv",
+        "accessoar",
+        "mode"
+      ]
+    },
+    {
+      "id": 689,
+      "name": "sommar stol",
+      "image": "https://m.media-amazon.com/images/I/71Rku4g0o-L._AC_UF1000,1000_QL80_.jpg",
+      "price": 299,
+      "tags": [
+        "sommar , stol"
+      ]
+    },
+    {
+      "id": 173,
+      "name": "Parasoll",
+      "image": "https://www.vidaxl.se/dw/image/v2/BFNS_PRD/on/demandware.static/-/Sites-vidaxl-catalog-master-sku/default/dw2926963e/hi-res/536/689/2918/719/423955/image_1_423955.jpg?sw=400",
+      "price": 517,
+      "tags": [
+        "sol , sommar "
+      ]
+    },
+    {
+      "id": 140,
+      "name": "Coca-Cola Minikyl",
+      "image": "https://static.partyking.org/fit-in/1300x0/products/original/coca-cola-kyl-1.jpg",
+      "price": 1986,
+      "tags": [
+        "sol , sommar , dryck"
+      ]
+    }
+  ]
+}

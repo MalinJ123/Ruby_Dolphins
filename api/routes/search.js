@@ -3,7 +3,7 @@ import { getDb } from '../data/database.js'
 
 const db = getDb()
 
-// Search by ID
+// Search by name
 async function searchQuery(req, res){
     let query = req.query.q
     let sort = req.query.sort
