@@ -39,9 +39,7 @@ const whereWeAre = dirname(fileURLToPath(import.meta.url))
 const dist = join(whereWeAre, '../dist')
 app.use( express.static(dist) )
 // -> Start
-app.get("/", (req, res) => {
-	res.send("Sökvägar: <ul><li>/api/products</li><li>/api/search/</li></ul>")
-})
+
 
 app.get('*', (req, res) => {
     res.sendFile(join(dist, 'index.html'))
