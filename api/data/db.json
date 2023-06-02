@@ -16,17 +16,14 @@
       "password": "cat"
     }
   ],
-
-
-
   "products": [
     {
       "id": 3,
-      "name": "Mlin",
-      "price": 110,
-      "image": "dgasdgasdg",
+      "name": "madrass",
+      "price": 10,
+      "image": "https://www.svenskahem.se/pub_images/original/1111_4-1.jpg",
       "tags": [
-        "basd"
+        "bad , sol"
       ]
     },
     {
@@ -238,7 +235,5 @@
         "mode"
       ]
     }
-    
-    
   ]
 }
