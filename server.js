@@ -36,7 +36,7 @@ app.use((req, res, next) => {
 
 // Routes //
 const whereWeAre = dirname(fileURLToPath(import.meta.url))
-const dist = join(whereWeAre, '../dist')
+const dist = join(whereWeAre, './dist')
 app.use( express.static(dist) )
 // -> Start
 
