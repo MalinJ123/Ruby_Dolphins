@@ -48,6 +48,7 @@ const Users = () => {
 
         const result = await updateUser(editUser)
         console.log(result);
+        setEditingUser({})
     }
 
     return(
