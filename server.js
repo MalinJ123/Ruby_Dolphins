@@ -1,5 +1,6 @@
 import express from "express";
-
+import { join, dirname } from 'path'
+import { fileURLToPath } from 'url'
 // Routers
 import productsRouter from "./api/routes/products.js";
 import usersRouter from "./api/routes/users.js";
@@ -34,10 +35,16 @@ app.use((req, res, next) => {
 
 
 // Routes //
-
+const whereWeAre = dirname(fileURLToPath(import.meta.url))
+const dist = join(whereWeAre, '../dist')
+app.use( express.static(dist) )
 // -> Start
 app.get("/", (req, res) => {
 	res.send("Sökvägar: <ul><li>/api/products</li><li>/api/search/</li></ul>")
+})
+
+app.get('*', (req, res) => {
+    res.sendFile(join(dist, 'index.html'))
 })
 
 // -> CRUD products
