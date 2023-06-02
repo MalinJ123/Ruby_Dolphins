@@ -16,7 +16,6 @@
       "password": "viggee123"
     }
   ],
-   
   "products": [
     {
       "id": 4,
@@ -203,6 +202,24 @@
         "motiv",
         "accessoar",
         "mode"
+      ]
+    },
+    {
+      "id": 308,
+      "name": "sommar stol",
+      "image": "https://www.svenskahem.se/pub_images/original/1111_4-1.jpg",
+      "price": 299,
+      "tags": [
+        "sommar"
+      ]
+    },
+    {
+      "id": 689,
+      "name": "sommar stol",
+      "image": "https://m.media-amazon.com/images/I/71Rku4g0o-L._AC_UF1000,1000_QL80_.jpg",
+      "price": 299,
+      "tags": [
+        "sommar , stol"
       ]
     }
   ]

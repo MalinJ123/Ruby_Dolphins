@@ -3,7 +3,6 @@ import { API_URL } from "./constants.js";
 async function addProduct(product) {
  
   const data = {
-    id: Number(product.id),
     name: product.name,
     price: Number(product.price),
     image: product.image,
@@ -16,8 +15,12 @@ async function addProduct(product) {
     },
     body: JSON.stringify(data),
   };
-  const response = await fetch(API_URL + "products/" + product.id, options);
+  const response = await fetch(API_URL + "products/"  , options);
   const statusObject = await response.json();
+  if (statusObject){
+    return true
+  }
+  return false
   console.log("response from Api", statusObject);
 }
 

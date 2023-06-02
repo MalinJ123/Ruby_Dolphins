@@ -7,6 +7,7 @@ import Products, {loader as productsLoader} from "../routes/Products";
 import Users, {loader as userLoader} from "../routes/Users";
 import ToUpdateProduct from "../components/UpdateProduct";
 import PostUser from "../components/AddUser";
+import AddProduct from "../routes/AddProduct";
 
 
 const router = createBrowserRouter([
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
             {
                 path: '/products/update',
                 element: <ToUpdateProduct />,
+            },
+            {
+                path: '/products/add',
+                element: <AddProduct />,
             },
             {
                 path: '/user/add',

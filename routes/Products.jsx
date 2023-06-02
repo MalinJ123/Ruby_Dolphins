@@ -26,6 +26,11 @@ function Products() {
 	return (
 		<div>
             <h3 className="produkt">Produkter</h3>
+			 {isLoggedIn &&
+							<div className="admin-div">
+							<Link to="/products/add"> <button className="admin-btn">Lägg till Produkt</button> </Link>							
+							</div>
+                            }
 			<section className="top-searchbar">
 				<div className="search-bar">
 					<input

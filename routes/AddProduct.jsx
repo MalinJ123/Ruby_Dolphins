@@ -5,9 +5,7 @@ import { addProduct } from "../data/addProduct.js";
 
 const AddProduct = () => {
 
-    const {product , setProduct} = useState({
-        
-        id: "" ,
+    const [product , setProduct] = useState({
         name: "",
         price: "",
         image: "",
@@ -15,10 +13,8 @@ const AddProduct = () => {
     })
 
     async function handleproduct(e) {
-       
         e.preventDefault();
         const newProduct = {
-            id: product.id,
             name: product.name,
             price: product.price,
             image: product.image,
@@ -40,47 +36,44 @@ const AddProduct = () => {
 
 
     return (
-        <div>
+        <div className="addproduct-div"> 
 
             <form onSubmit={handleproduct} className="addproduct-form">
 
-            <section className="input-sec">
-                <label htmlFor="Id"> Id:
-                    <input id="Id" type="number"  placeholder="Id" 
-                    onChange={(e) => setProduct({...product , id: e.target.value})} />    
-                </label>    
-            </section>    
+            
 
-            <section className="input-sec">
+      
+            <div>
                 <label htmlFor="name"> Produktnamn:
+                </label>    
                     <input id="name" type="text"  placeholder="name" 
-                    onChange={(e) => setProduct({...product , name: e.target.value})} />    
-                </label>    
-            </section>  
+                   onChange={(e) => setProduct({...product , name: e.target.value})}/>    
+            </div>  
 
-            <section className="input-sec">
+            <div>
                 <label htmlFor="price"> Produktpris:
-                    <input id="price" type="number"  placeholder="Price" 
-                    onChange={(e) => setProduct({...product , name: e.target.value})} />    
                 </label>    
-            </section>  
+                    <input id="price" type="number"  placeholder="Price" 
+                    onChange={(e) => setProduct({...product , price: e.target.value})} />    
+            </div>  
 
-            <section className="input-sec">
+            <div>
                 <label htmlFor="image"> Produktbild: 
+                </label>    
                     <input id="image" type="text"  placeholder="image" 
                     onChange={(e) => setProduct({...product , image: e.target.value})} />    
-                </label>    
-            </section>  
+            </div>  
 
-            <section className="input-sec">
+            <div>
                 <label htmlFor="tags"> Produkttaggar:
+                </label>    
                     <input id="tags" type="text"  placeholder="tags" 
                     onChange={(e) => setProduct({...product , tags: e.target.value})} />    
-                </label>    
-            </section>  
+            </div>  
 
-            <button className="add-btn" type="submit" >Click</button>
+            <button className="add-btn" type="submit" >Lägg till produkt</button>
             </form>
+                    
         </div>
     )
 

@@ -1,11 +1,12 @@
-.addproduct-form {
+.addproduct-div {
     margin-top: 4em;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     width: 100%;
     z-index: 1;
 }
-.input-sec{
+.addproduct-form{
     display: flex;
     flex-direction: column;
     background-color: rgb(104, 102, 102);
@@ -13,6 +14,11 @@
     border-radius: 10px;
     gap: 1em;
     color: white;
+}
+
+.addproduct-form div{
+    display: flex;
+    flex-direction: column;
 }
 
 .input-sec{
