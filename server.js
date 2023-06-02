@@ -54,6 +54,7 @@ app.use('/api/users', usersRouter)
 app.get('*', (req, res) => {
     res.sendFile(join(dist, 'index.html'))
 })
+
 // Startar servern
 app.listen(PORT, () => {
 	console.log(`Listening on port ${PORT}...`)
