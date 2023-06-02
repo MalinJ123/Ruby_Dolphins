@@ -1,17 +1,18 @@
 .main-form{
     margin-top: 2em;
     position: absolute;
-    top: 2em;
+    top: 4em;
     z-index: 1;
-    background-color: rgba(40, 35, 35, 0.703);
+    background-color: rgba(14, 12, 12, 0.833);
     padding: 2em;
+    border-radius: 10%;
+    right: 35%;
 }
 
 .form-div{
-    width: 60%;
     display: flex;
     flex-direction: column;
-    padding: 4em;
+    padding: 5em;
     border-radius: 10px;
     gap: 1em;
     color: white;
@@ -56,3 +57,23 @@ label{
     color: rgb(27, 26, 26);
 }
 
+@media screen and (max-width: 790px){
+    .main-form{
+        margin-top: 2em;
+        /* position: absolute; */
+        top: 4em;
+        z-index: 1;
+        background-color: rgba(14, 12, 12, 0.833);
+        /* padding: 2em; */
+        /* border-radius: 10%; */
+        /* right: 35%; */
+    }
+    .form-div{
+        display: flex;
+        flex-direction: column;
+        padding: 5em;
+        border-radius: 10px;
+        gap: 1em;
+        color: white;
+    }
+}

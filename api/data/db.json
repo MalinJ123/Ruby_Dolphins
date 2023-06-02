@@ -8,28 +8,6 @@
   ],
   "products": [
     {
-      "id": 4,
-      "name": "Volleybollnät",
-      "price": 349,
-      "image": "https://exportpagescdn.net/v2/images/format-product-fullsize/7bb81f4f-5ee0-11ea-96d9-0cc47a40e97c/vollybolln%C3%A4t-fr%C3%A5n-manfred-huck-gmbh.jpg",
-      "tags": [
-        "strand",
-        "sport",
-        "aktivitet"
-      ]
-    },
-    {
-      "id": 5,
-      "name": "Vattenspridare",
-      "price": 79,
-      "image": "https://www.wexthuset.com/images/products/kent-stowe/vattenspridare-flopro-plus-thyphoon.jpg",
-      "tags": [
-        "lek",
-        "trädgård",
-        "vatten"
-      ]
-    },
-    {
       "id": 6,
       "name": "Bikini",
       "price": 399,
