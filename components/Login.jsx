@@ -56,12 +56,12 @@ const LoginForm = () => {
 
                     <div className="input-div">
                         <label htmlFor="name">Användarnamn</label>
-                        <input id="name" type="text" value={userName} onChange={handleUserNameChange} />
+                        <input id="name" type="text" value={userName} placeholder="Användarnamn" onChange={handleUserNameChange} />
                     </div>
 
                     <div className="input-div">
                         <label htmlFor="password">Lösenord</label>
-                        <input id="password" type="password" value={userPassword} onChange={handleUserPasswordChange} />
+                        <input id="password" type="password" placeholder="Lösenord" value={userPassword} onChange={handleUserPasswordChange} />
                     </div>
 
                     <div className="login-div">
