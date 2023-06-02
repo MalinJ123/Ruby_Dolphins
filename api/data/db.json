@@ -4,6 +4,16 @@
       "id": 1,
       "name": "Admin",
       "password": "mums"
+    },
+    {
+      "id": 997,
+      "name": "lol",
+      "password": "lolii"
+    },
+    {
+      "id": 2162,
+      "name": "Viktor",
+      "password": "viggee123"
     }
   ],
   "products": [
