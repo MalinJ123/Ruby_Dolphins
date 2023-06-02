@@ -34,7 +34,10 @@ function Header() {
 				</NavLogoBox>
 				<NavActionBox>
 					<ImposterNavLinkBtn  onClick={() => setShowMobileNav(!showMobileNav)} title="Meny"><span className="material-symbols-outlined">menu</span></ImposterNavLinkBtn>
+					{!isLoggedIn &&
 					<LoginNavBtn onClick={() => setShowLoginForm(!showLoginForm)}  ><span className="material-symbols-outlined">login</span></LoginNavBtn>
+					
+					}
 					{
 						isLoggedIn && (
 							<LoginNavLinkBtn onClick={() => setShowAdminSettings(!showAdminSettings)} >
