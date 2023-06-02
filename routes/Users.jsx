@@ -64,8 +64,8 @@ const Users = () => {
                                 <p>Ändrar på {user.name}</p>
                                 <input type="text" placeholder={user.name} value={userName} onChange={handleUserNameChange} />
                                 <input type="text" placeholder={user.password} value={userPassword} onChange={handleUserPasswordChange} />
-                                <button type="submit">Spara ändring</button>
-                                <button onClick={() => setEditingUser({})}>Avbryt</button>
+                                <button className="user-btn" type="submit">Spara</button>
+                                <button className="user-btn" onClick={() => setEditingUser({})}>Avbryt</button>
                             </form>
                         ) 
                         : 
