@@ -7,7 +7,7 @@ import usersRouter from "./api/routes/users.js";
 import searchQuery from "./api/routes/search.js";
 
 // Express saker
-const PORT = 91167
+const PORT = 56123
 const app = express()
 
 // The middlemen are looking at us
