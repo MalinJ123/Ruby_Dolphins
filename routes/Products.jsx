@@ -71,7 +71,7 @@ function Products() {
                                 
 							<Link to="/products/update"> <button className="admin-btn">Uppdatera</button> </Link>
 
-                            <button onClick={ () => handleOnClick(product.id) } className="admin-delete-btn">  <p>Ta bort</p></button>
+                            <button onClick={ () => handleOnClick(product.id) } className="admin-btn">  <p>Ta bort</p></button>
 							
 
 							</div>
