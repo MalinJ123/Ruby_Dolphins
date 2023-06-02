@@ -144,7 +144,7 @@ router.put("/:id", async (req, res) => {
 
     db.data.users[oldUser] = editedUser;
     await db.write();
-    res.status(200).send(`Ändringen har Lyckats, här är resultatet: ${JSON.stringify(editedUser)}`)
+    res.status(200).send(JSON.stringify(editedUser))
 });
 
 
