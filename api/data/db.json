@@ -205,21 +205,30 @@
       ]
     },
     {
-      "id": 308,
-      "name": "sommar stol",
-      "image": "https://www.svenskahem.se/pub_images/original/1111_4-1.jpg",
-      "price": 299,
-      "tags": [
-        "sommar"
-      ]
-    },
-    {
       "id": 689,
       "name": "sommar stol",
       "image": "https://m.media-amazon.com/images/I/71Rku4g0o-L._AC_UF1000,1000_QL80_.jpg",
       "price": 299,
       "tags": [
         "sommar , stol"
+      ]
+    },
+    {
+      "id": 173,
+      "name": "Parasoll",
+      "image": "https://www.vidaxl.se/dw/image/v2/BFNS_PRD/on/demandware.static/-/Sites-vidaxl-catalog-master-sku/default/dw2926963e/hi-res/536/689/2918/719/423955/image_1_423955.jpg?sw=400",
+      "price": 517,
+      "tags": [
+        "sol , sommar "
+      ]
+    },
+    {
+      "id": 140,
+      "name": "Coca-Cola Minikyl",
+      "image": "https://static.partyking.org/fit-in/1300x0/products/original/coca-cola-kyl-1.jpg",
+      "price": 1986,
+      "tags": [
+        "sol , sommar , dryck"
       ]
     }
   ]
