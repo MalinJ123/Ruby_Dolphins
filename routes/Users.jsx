@@ -48,6 +48,7 @@ const Users = () => {
 
         const result = await updateUser(editUser)
         console.log(result);
+        setEditingUser({})
     }
 
     return(
@@ -61,7 +62,7 @@ const Users = () => {
                                 <p>Ändrar på {user.name}</p>
                                 <input type="text" placeholder={user.name} value={userName} onChange={handleUserNameChange} />
                                 <input type="text" placeholder={user.password} value={userPassword} onChange={handleUserPasswordChange} />
-                                <button type="submit">Spara ändring</button>
+                                <button type="submit" onClick={() => setEditingUser({})}>Spara ändring</button>
                             </form>
                         ) 
                         : 
