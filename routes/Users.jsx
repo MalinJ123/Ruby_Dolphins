@@ -2,15 +2,21 @@ import { getUsers } from "../data/getUsers";
 import { useLoaderData } from "react-router-dom";
 import "../stylesheet/users.css"
 import { deletUser } from "../data/deleteUser";
+import { updateUser } from "../data/updateUser";
+import { useState } from "react";
 
 export const loader = () => getUsers();
 
 const Users = () => {
     const userData = useLoaderData();
 
+    const [editingUser, setEditingUser] = useState({});
+    const [userName, setUserName] = useState("");
+    const [userPassword, setUserPassword] = useState("");
+
     const handleDelete = async (userId) => {
         console.log(userId);
-        try{
+        try {
              const result = await deletUser(userId)
              console.log(result);
         }catch(error){
@@ -19,24 +25,60 @@ const Users = () => {
         }
     } 
 
+    const onEditUser = (user) => {
+        setEditingUser(user)
+    }
+
+    const handleUserNameChange = (e) => {
+        setUserName(e.target.value);
+    }
+
+    const handleUserPasswordChange = (e) => {
+        setUserPassword(e.target.value);
+    }
+
+    const onSubmit = async (e) => {
+        e.preventDefault()
+
+        let editUser = {
+            id: editingUser.id,
+            name: userName,
+            password: userPassword,
+        }
+
+        const result = await updateUser(editUser)
+        console.log(result);
+    }
+
     return(
-        <>
-        <div className="users-div">
+            <div className="users-div">
 
-        {userData.map((user) =>(
-            <div key={user.id} className="user-div" >
-                <li className="user-li"> Id: {user.id} <br /> Användarnamn: {user.name}</li>
-                <div className="user-button">
-                <button className="user-btn"> Uppdatera</button>
-                <button onClick={() => handleDelete(user.id)} className="user-btn"> Ta bort</button>
-
+            {userData.map((user) => (
+                <div key={user.id} className="user-div">
+                    {
+                        editingUser.id === user.id ? (
+                            <form onSubmit={onSubmit}>
+                                <p>Ändrar på {user.name}</p>
+                                <input type="text" placeholder={user.name} value={userName} onChange={handleUserNameChange} />
+                                <input type="text" placeholder={user.password} value={userPassword} onChange={handleUserPasswordChange} />
+                                <button type="submit">Spara ändring</button>
+                            </form>
+                        ) 
+                        : 
+                        <>
+                            <li className="user-li"> Id: {user.id} <br /> Användarnamn: {user.name}</li>
+                            <div className="user-button">
+                                <button onClick={() => onEditUser(user)} className="user-btn"> Uppdatera</button>
+                                <button onClick={() => handleDelete(user.id)} className="user-btn"> Ta bort</button>
+                            </div>
+                        </>
+                    }
                 </div>
-
+                )
+                )
+            }
             </div>
-            ))}
-            </div>
-        </>
     )
-};
+}
 
 export default Users
