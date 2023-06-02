@@ -8,7 +8,7 @@ async function getProducts() {
             'Content-Type': 'application/json',
         }
     }
-    const response = await fetch('/api/products/' , options );
+    const response = await fetch(API_URL + 'products/', options );
     const data = await response.json();
     console.log('Response: ', data);
     return data;
