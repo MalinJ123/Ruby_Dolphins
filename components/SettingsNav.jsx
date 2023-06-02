@@ -6,6 +6,7 @@ const SettingsNavBar = () =>{
     const {isLoggedIn, setIsLoggedIn} = useContext(LoginContext);
     return(
         <>
+        {isLoggedIn &&
         <div className="settings-navbar">
             <div className="navlink-div">
             <NavLink to="/users"> <button className="login-btn"> Användare </button>  </NavLink>
@@ -14,6 +15,7 @@ const SettingsNavBar = () =>{
             <NavLink to="/"> <button onClick={() => setIsLoggedIn(!isLoggedIn)} className="login-btn"> Logga ut  </button> </NavLink>
             </div>
         </div>
+        }
         
         </>
     )
