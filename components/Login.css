@@ -34,7 +34,11 @@ margin-bottom: 1em;
 
 input{
     align-self: center;
+<<<<<<< HEAD
     /* width: 40%; */
+=======
+    width: 200px;
+>>>>>>> 5b7aee5d4e0b8eea694e139cc9c09a8e8a1fe5cc
 }
 
 label{

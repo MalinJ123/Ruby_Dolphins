@@ -59,14 +59,23 @@ function Products() {
 								<p className="product-price">
 									Pris: {product.price} kr
 								</p>
+<<<<<<< HEAD
 								<p className="tags">Taggar: { product.tags.join(",  ")}</p>
+=======
+								<p>Taggar: {product.tags.join(", ")}</p>
+                                {isLoggedIn &&
+                                 <p> Id: {product.id}</p>
+                            
+                            }
+>>>>>>> 5b7aee5d4e0b8eea694e139cc9c09a8e8a1fe5cc
 
 							</div>
                             {isLoggedIn &&
 							<div className="admin-div">
+                                
 							<Link to="/products/update"> <button className="admin-btn">Uppdatera</button> </Link>
 
-                            <button onClick={ () => handleOnClick(product.id) } className="admin-btn"> Ta bort</button>
+                            <button onClick={ () => handleOnClick(product.id) } className="admin-delete-btn">  <p>Ta bort</p></button>
 							
 
 							</div>
