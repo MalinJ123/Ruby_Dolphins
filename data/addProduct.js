@@ -15,7 +15,7 @@ async function addProduct(product) {
     },
     body: JSON.stringify(data),
   };
-  const response = await fetch(API_URL + "products/"  , options);
+  const response = await fetch('/api/products/'  , options);
   const statusObject = await response.json();
   if (statusObject){
     return true
