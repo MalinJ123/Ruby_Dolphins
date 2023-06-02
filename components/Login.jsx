@@ -51,7 +51,7 @@ const LoginForm = () => {
             <form className="main-form" onSubmit={handleSubmit}>
                 <div className="form-div">
                     <div className="form-header">
-                    <h3>ADMIN</h3>
+                    <h3 className="Admin-title">ADMIN</h3>
                     </div>
 
                     <div className="input-div">

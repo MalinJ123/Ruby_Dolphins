@@ -59,7 +59,7 @@ function Products() {
 								<p className="product-price">
 									Pris: {product.price} kr
 								</p>
-								<p>Taggar: {product.tags.join(", ")}</p>
+								<p className="tags">Taggar: { product.tags.join(",  ")}</p>
 
 							</div>
                             {isLoggedIn &&

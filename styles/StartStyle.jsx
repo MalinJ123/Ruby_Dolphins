@@ -1,12 +1,14 @@
 import styled from "styled-components"
 
 import heroImage from "../images/hero-image.jpeg"
+import paradise from "../images/paradise.jpeg"
 
 // Message
 
 export const MessageField = styled.div `
     min-height: 50px;
-    background-color: #eb2424;
+    background: rgb(208,223,37);
+    background: linear-gradient(128deg, rgb(208, 227, 0) 0%, rgb(68, 146, 80) 100%);
     color: #f1f1f1;
     width: 100%;
     font-size: 30px;
@@ -28,7 +30,7 @@ export const HeroImage = styled.div `
     width: 100%;
     height: 395px;
     background-size: cover;
-    background-image: url('${heroImage}');
+    background-image: url('${paradise}');
     background-repeat: no-repeat;
     border-radius: 6.5px;
     display: grid;
@@ -40,6 +42,7 @@ export const HeroImageText = styled.p `
     font-size: 32px;
     font-weight: 500;
     margin-right: 1.25em;
+    margin-top: 7em;
     color: #fff;
 `
 

@@ -1,3 +1,23 @@
+.start-title{
+	/* border: 2px solid black; */
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+.start-message{
+	/* border: 1px solid black;  */
+	padding: 3em;
+
+	background: rgb(208,223,37);
+	background: linear-gradient(128deg, rgb(208, 227, 0) 0%, rgb(68, 146, 80) 100%);
+	padding: 4em;
+	/* box-shadow: 0 2px 4px rgba(0, 0, 0, 10.1); */
+	border-radius: 8px;
+	align-items: center;
+}
+
+
+/* -------------- slut på start sida ------------------- */
+
 .products-body {
 	display: flex;
 	align-items: center;
@@ -18,7 +38,18 @@
 	flex-wrap: wrap;
 	margin: 2em 3em; 
 }
+.produkt{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 1em;
+	height: 3em;
+	border: 1px solid black;
+	color: white;
+	background: rgba(0, 0, 0, 0.703);
 
+
+}
 .product {
     width: 250px ;
     display: flex;
@@ -29,12 +60,6 @@
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 10.1);
 	border-radius: 8px;
     align-items: center;
-
-	 /* display: flex;
-	 flex-direction: column; 
-	align-items: center;
-	justify-content: center; 
-	 border: 2px solid black;  */
 }
 
 
@@ -61,6 +86,10 @@
 	font-weight: bold;
 }
 
+.tags{
+	margin-top: 1em;
+}
+
 
 .admin-div{
     display: flex;
@@ -73,7 +102,7 @@
     background-color: rgb(27, 26, 26);
     color: white;
     border: none;
-    font-size: 16px;
+    font-size: 13px;
     padding: .4em 1em;
     border-radius: 4px;
     cursor: pointer;
@@ -85,23 +114,5 @@
 }
 
 
-/* @media screen and (max-width: 1400px) {
-	.grid-container {
-		flex-wrap: wrap;
-		
-	}
-} */
 
-@media screen and (max-width: 768px) {
-	/* .grid-container {
-		grid-template-columns: repeat(1, 1fr);
-	}
 
-	.search-input {
-		margin-left: 1em;
-	}
-
-	.sort-dropdown {
-		margin-left: 1em;
-	} */
-}

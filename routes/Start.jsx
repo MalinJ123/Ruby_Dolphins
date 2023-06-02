@@ -13,10 +13,10 @@ function Start() {
                 <HeroImageText>Marknadens bästa produkter</HeroImageText>
             </HeroImage>
             <TitleContainer>
-                <h1>Sommaren knackar på!</h1>
+                <h1 className="start-title">Sommaren knackar på!</h1>
             </TitleContainer>
             <TextContainer>
-                <p>
+                <p className="start-message">
                     Är du redo inför sommaren? Vi har allt du behöver för att njuta av solen, havet och värmen. Oavsett om du vill bada, grilla, campa eller bara slappa har vi produkterna som passar dig. Kolla in vårt fantastiska utbud av badkläder, solskydd, grillar, tält och mycket mer. Skynda dig att beställa innan det är för sent. Sommaren väntar inte på någon!
                 </p>
             </TextContainer>
